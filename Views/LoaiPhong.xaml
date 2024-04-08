@@ -1,0 +1,50 @@
+﻿<Page x:Class="DuAn_QuanLiKhachSan.Views.LoaiPhong"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DuAn_QuanLiKhachSan.Views"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+      Height="auto" Width="auto" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="41*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+            <TextBox x:Name="txt_searchRoom" Tag="Tìm loại phòng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" />
+            <fa:IconImage Icon="Search" Style="{DynamicResource Icon}" Height="26" Width="26" Margin="-40 0 0 0"/>
+        </StackPanel>
+        <Button x:Name="btn_themLoaiPhong" Content="THÊM LOẠI PHÒNG" Grid.Column="2" Width="200" Style="{DynamicResource MainBtn}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btn_themLoaiPhong_Click" Margin="5,0,0,0"/>
+
+        <DataGrid x:Name="DatagridLoaiPhong" Grid.Row="1" Grid.ColumnSpan="3" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="MÃ LOẠI PHÒNG" Width="*" Binding="{Binding MaLoaiPhong}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="TÊN LOẠI PHÒNG" Width="*" Binding="{Binding TenLoaiPhong}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="GIÁ THEO NGÀY" Width="*" Binding="{Binding GiaTheoGio}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="GIÁ THEO GIỜ" Width="*" Binding="{Binding GiaTheoNgay}" IsReadOnly="True"/>
+                <DataGridTemplateColumn Header="TÙY CHỈNH" IsReadOnly="True" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Style="{StaticResource gridEditButton}" Click="Button_Click_1">
+                                    <fa:IconImage Icon="Pencil" Style="{StaticResource gridBtnIcon}"/>
+                                </Button>
+                                <Button Style="{StaticResource gridRemoveButton}" Click="Button_Click">
+                                    <fa:IconImage Icon="TrashCan" Style="{StaticResource gridBtnIcon}"/>
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

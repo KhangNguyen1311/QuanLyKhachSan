@@ -1,0 +1,88 @@
+﻿<Window x:Class="DuAn_QuanLiKhachSan.PageChild.DSPhietDatphong"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DuAn_QuanLiKhachSan.PageChild"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="phieuDatPhong" Height="700" Width="1102" WindowStyle="None" AllowsTransparency="True" Background="Transparent" >
+
+    <Border Background="{DynamicResource SecundaryBackgroundColor}"  CornerRadius="20" BorderThickness="2" BorderBrush="#7f7cf1" Margin="0,0,0,-6" >
+        <Grid Margin="0,0,38,-22">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="307*"/>
+                <ColumnDefinition Width="91*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="500"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft" Grid.Column="1">
+                <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
+                <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
+            </StackPanel>
+
+            <TextBlock Text="PHIẾU ĐẶT PHÒNG" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}" Margin="407,33,0,0" Grid.RowSpan="2"/>
+
+            <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,51,0" Height="446" VerticalAlignment="Top">
+
+                <!--THÔNG TIN ĐẶT PHÒNG-->
+                <Grid Margin="0,0,0,174">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Margin="23,10,-23,-196" Grid.RowSpan="3">
+                        <TextBlock Text="Danh sách phòng"  Foreground="{DynamicResource PrimaryTextColor}" FontSize="18" FontWeight="Bold" FontFamily="Bahnschrift" Height="28" Width="1244"/>
+                        <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Auto"  CanContentScroll="False">
+                            <DataGrid x:Name="danhSachPhongTrong" Margin="10 0 10 0" Grid.ColumnSpan="2" Style="{DynamicResource DataGridStyle1}"  CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}"
+                            Height="500" Width="939">
+
+
+
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Mã Phiếu đặt phòng" Width="*" Binding="{Binding MaPDP}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Mã phòng" Width="*" Binding="{Binding MaPhong}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Tổng giá trị" Width="*" Binding="{Binding TongGiaTri}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Ngày đặt " Width="*" Binding="{Binding NgayDat}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Ngày kết thúc" Width="*" Binding="{Binding NgayketThuc}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Giờ đặt" Width="*" Binding="{Binding GioDat}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Giờ kết thúc" Width="*" Binding="{Binding GioKetThuc}" IsReadOnly="True"/>
+                                    <DataGridTemplateColumn Header="Tùy chỉnh" IsReadOnly="True" Width="*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Style="{StaticResource gridEditButton}" Margin="0 0 10 0" Click="Button_Click" >
+                                                        <fa:IconImage Icon="Pencil" Style="{StaticResource gridBtnIcon}"/>
+                                                    </Button>
+
+
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+
+
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+
+                    </StackPanel>
+
+                </Grid>
+
+            </Grid>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left" Margin="37,0,0,0" Grid.Column="1">
+                <Button Content="Lưu" Style="{DynamicResource MainBtn}" Height="30" Width="114"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</Window>
+

@@ -1,0 +1,57 @@
+﻿<Page x:Class="DuAn_QuanLiKhachSan.Views.HoaDon"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DuAn_QuanLiKhachSan.Views"
+      Height="auto" Width="auto"
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="HoaDon">
+
+
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txt_Tim" Tag="Tìm hóa đơn theo mã" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" TextChanged="txt_searchBill_TextChanged"/>
+                <fa:IconImage Icon="Search" Style="{DynamicResource Icon}" Height="26" Width="26"/>
+                <DatePicker Width="150" x:Name="dtpChonNgay"
+                   materialDesign:HintAssist.Hint="Tìm theo ngày"
+                   Padding="10 10 10 5"
+                   Style="{StaticResource MaterialDesignFilledDatePicker}" 
+                   FirstDayOfWeek="Monday" 
+                   Focusable="False" Foreground="{DynamicResource PrimaryTextColor}" FontSize="16" 
+                   Background="{DynamicResource SecundaryBackgroundColor}" SelectedDateChanged="dtpChonNgay_SelectedDateChanged"/>
+
+            </StackPanel>
+
+
+            <DataGrid x:Name="datagrid" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource DataGridStyle1}"  CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="MÃ HÓA ĐƠN" Width="*" Binding="{Binding MaHD}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="NGÀY LẬP" Width="*" Binding="{Binding NgayInHD}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="NHÂN VIÊN PHỤ TRÁCH" Width="*" Binding="{Binding TenNV}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="TỔNG TIỀN" Width="*" Binding="{Binding TongGiaTri}" IsReadOnly="True"/>
+                    <DataGridTemplateColumn Header="CHI TIẾT"  IsReadOnly="True" Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource gridEditButton}" Click="View_Click">
+                                    <fa:IconImage Icon="Eye" Style="{StaticResource gridBtnIcon}"/>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Border>
+</Page>

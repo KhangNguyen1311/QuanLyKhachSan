@@ -1,0 +1,306 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC5068F9-590A-4E86-9C11-B0BC37213BBE}|DTO_QLKS\\DTO_QLKS.csproj|d:\\code\\c#\\duan_quanlikhachsan\\dto_qlks\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC5068F9-590A-4E86-9C11-B0BC37213BBE}|DTO_QLKS\\DTO_QLKS.csproj|solutionrelative:dto_qlks\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|d:\\code\\c#\\duan_quanlikhachsan\\pagechild\\themkhachhangg.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:pagechild\\themkhachhangg.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\pagechild\\themkhachhangg.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:pagechild\\themkhachhangg.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\views\\datphong.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:views\\datphong.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\pagechild\\phieudatphong.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:pagechild\\phieudatphong.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\views\\loaiphong.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:views\\loaiphong.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E409B4E-B534-452D-BF9C-D0A2F345873A}|BUS_QLKS\\BUS_QLKS.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\bus_qlks\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E409B4E-B534-452D-BF9C-D0A2F345873A}|BUS_QLKS\\BUS_QLKS.csproj|solutionrelative:bus_qlks\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E409B4E-B534-452D-BF9C-D0A2F345873A}|BUS_QLKS\\BUS_QLKS.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\bus_qlks\\bus_phieudatphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E409B4E-B534-452D-BF9C-D0A2F345873A}|BUS_QLKS\\BUS_QLKS.csproj|solutionrelative:bus_qlks\\bus_phieudatphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/WINDOWS_PC/QL_KhachSan/True/SqlTable/dbo.ChiTietPhieuDatPhong.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\pagechild\\xuathoadon.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:pagechild\\xuathoadon.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370700EB-BFBA-468F-A9FA-C9660C311658}|DAL_QLKS\\DAL_QLKS.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\dal_qlks\\dal_hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{370700EB-BFBA-468F-A9FA-C9660C311658}|DAL_QLKS\\DAL_QLKS.csproj|solutionrelative:dal_qlks\\dal_hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\views\\nhanvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:views\\nhanvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370700EB-BFBA-468F-A9FA-C9660C311658}|DAL_QLKS\\DAL_QLKS.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\dal_qlks\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{370700EB-BFBA-468F-A9FA-C9660C311658}|DAL_QLKS\\DAL_QLKS.csproj|solutionrelative:dal_qlks\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\views\\phong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:views\\phong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\pagechild\\themloaidichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:pagechild\\themloaidichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\views\\dichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:views\\dichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|D:\\Code\\C#\\DuAn_QuanLiKhachSan\\pagechild\\themloaiphong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{40A534A7-6729-49F9-9909-35AF8DF4F36B}|DuAn_QuanLiKhachSan.csproj|solutionrelative:pagechild\\themloaiphong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\DTO_QLKS\\Class1.cs",
+              "RelativeDocumentMoniker": "DTO_QLKS\\Class1.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\DTO_QLKS\\Class1.cs",
+              "RelativeToolTip": "DTO_QLKS\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T13:43:18.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "themkhachhangg.xaml",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themkhachhangg.xaml",
+              "RelativeDocumentMoniker": "PageChild\\themkhachhangg.xaml",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themkhachhangg.xaml",
+              "RelativeToolTip": "PageChild\\themkhachhangg.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-08T13:35:22.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoaiPhong.xaml.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\LoaiPhong.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\LoaiPhong.xaml.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\LoaiPhong.xaml.cs",
+              "RelativeToolTip": "Views\\LoaiPhong.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAA5wDkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T13:31:08.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "phieuDatPhong.xaml.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\phieuDatPhong.xaml.cs",
+              "RelativeDocumentMoniker": "PageChild\\phieuDatPhong.xaml.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\phieuDatPhong.xaml.cs",
+              "RelativeToolTip": "PageChild\\phieuDatPhong.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T13:27:46.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "themkhachhangg.xaml.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themkhachhangg.xaml.cs",
+              "RelativeDocumentMoniker": "PageChild\\themkhachhangg.xaml.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themkhachhangg.xaml.cs",
+              "RelativeToolTip": "PageChild\\themkhachhangg.xaml.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAqwGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T13:23:52.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatPhong.xaml.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\DatPhong.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\DatPhong.xaml.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\DatPhong.xaml.cs",
+              "RelativeToolTip": "Views\\DatPhong.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T06:24:45.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BUS_NhanVien.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\BUS_QLKS\\BUS_NhanVien.cs",
+              "RelativeDocumentMoniker": "BUS_QLKS\\BUS_NhanVien.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\BUS_QLKS\\BUS_NhanVien.cs",
+              "RelativeToolTip": "BUS_QLKS\\BUS_NhanVien.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBwAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T07:43:59.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "dbo.ChiTietPhieuDatPhong [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/WINDOWS_PC/QL_KhachSan/True/SqlTable/dbo.ChiTietPhieuDatPhong.sql",
+              "ToolTip": "dbo.ChiTietPhieuDatPhong [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-07T12:45:39.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BUS_PhieuDatPhong.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\BUS_QLKS\\BUS_PhieuDatPhong.cs",
+              "RelativeDocumentMoniker": "BUS_QLKS\\BUS_PhieuDatPhong.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\BUS_QLKS\\BUS_PhieuDatPhong.cs",
+              "RelativeToolTip": "BUS_QLKS\\BUS_PhieuDatPhong.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T06:27:07.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Phong.xaml",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\Phong.xaml",
+              "RelativeDocumentMoniker": "Views\\Phong.xaml",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\Phong.xaml",
+              "RelativeToolTip": "Views\\Phong.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-02T07:19:50.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DAL_HoaDon.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\DAL_QLKS\\DAL_HoaDon.cs",
+              "RelativeDocumentMoniker": "DAL_QLKS\\DAL_HoaDon.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\DAL_QLKS\\DAL_HoaDon.cs",
+              "RelativeToolTip": "DAL_QLKS\\DAL_HoaDon.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T06:36:28.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NhanVien.xaml",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\NhanVien.xaml",
+              "RelativeDocumentMoniker": "Views\\NhanVien.xaml",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\NhanVien.xaml",
+              "RelativeToolTip": "Views\\NhanVien.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-02T07:23:38.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "xuatHoaDon.xaml.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\xuatHoaDon.xaml.cs",
+              "RelativeDocumentMoniker": "PageChild\\xuatHoaDon.xaml.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\xuatHoaDon.xaml.cs",
+              "RelativeToolTip": "PageChild\\xuatHoaDon.xaml.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAawHkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T06:35:00.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DAL_NhanVien.cs",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\DAL_QLKS\\DAL_NhanVien.cs",
+              "RelativeDocumentMoniker": "DAL_QLKS\\DAL_NhanVien.cs",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\DAL_QLKS\\DAL_NhanVien.cs",
+              "RelativeToolTip": "DAL_QLKS\\DAL_NhanVien.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T07:43:54.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DichVu.xaml",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\DichVu.xaml",
+              "RelativeDocumentMoniker": "Views\\DichVu.xaml",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\Views\\DichVu.xaml",
+              "RelativeToolTip": "Views\\DichVu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-01T07:40:12.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "themLoaiDichVu.xaml",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themLoaiDichVu.xaml",
+              "RelativeDocumentMoniker": "PageChild\\themLoaiDichVu.xaml",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themLoaiDichVu.xaml",
+              "RelativeToolTip": "PageChild\\themLoaiDichVu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-02T07:12:20.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "themLoaiPhong.xaml",
+              "DocumentMoniker": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themLoaiPhong.xaml",
+              "RelativeDocumentMoniker": "PageChild\\themLoaiPhong.xaml",
+              "ToolTip": "D:\\Code\\C#\\DuAn_QuanLiKhachSan\\PageChild\\themLoaiPhong.xaml",
+              "RelativeToolTip": "PageChild\\themLoaiPhong.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-02T05:47:05.829Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 143,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

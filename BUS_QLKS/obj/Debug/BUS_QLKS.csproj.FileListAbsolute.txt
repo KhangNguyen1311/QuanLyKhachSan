@@ -1,0 +1,15 @@
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\BUS_QLKS.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\BUS_QLKS.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\DAL_QLKS.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\DTO_QLKS.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\DAL_QLKS.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\DTO_QLKS.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\obj\Debug\BUS_QLKS.csproj.AssemblyReference.cache
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\obj\Debug\BUS_QLKS.csproj.CoreCompileInputs.cache
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\obj\Debug\BUS_QLKS.csproj.Up2Date
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\obj\Debug\BUS_QLKS.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\obj\Debug\BUS_QLKS.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\EntityFramework.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\DAL_QLKS.dll.config
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\DTO_QLKS.dll.config
+D:\Code\C#\DuAn_QuanLiKhachSan\BUS_QLKS\bin\Debug\EntityFramework.xml

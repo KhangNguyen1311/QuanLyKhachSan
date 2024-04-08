@@ -1,0 +1,186 @@
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\DuAn_QuanLiKhachSan.exe.config
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\DuAn_QuanLiKhachSan.exe
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\DuAn_QuanLiKhachSan.pdb
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.csproj.AssemblyReference.cache
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Icons\Icons.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\MainStyles\Styles.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Themes\DarkTheme.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Themes\LightTheme.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\MainWindow.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\App.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan_MarkupCompile.cache
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan_MarkupCompile.lref
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\App.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\MainWindow.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.g.resources
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.Properties.Resources.resources
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.csproj.GenerateResource.cache
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.csproj.CoreCompileInputs.cache
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.exe
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.pdb
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\FontAwesome.Sharp.dll
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.csproj.CopyComplete
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignColors.dll
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignColors.pdb
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\DialogCustoms.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\DialogCustoms.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.dll
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.Wpf.dll
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.pdb
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.xml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.Wpf.pdb
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.Wpf.xml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\DatPhong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\LoaiPhong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\Phong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\DatPhong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\LoaiPhong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\Phong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themPhong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themPhong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\phieuDatPhong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\phieuDatPhong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\HoaDon.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\HoaDon.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\KhachHang.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\KhachHang.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\DichVu.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\DichVu.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themDichVu.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themDichVu.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiDichVu.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiDichVu.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\NhanVien.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\NhanVien.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themNhanVien.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themNhanVien.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongtinPhong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongtinPhong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themDichVuPhong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themDichVuPhong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\xuatHoaDon.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\xuatHoaDon.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\trangChu.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\trangChu.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\UserControls\InfoCard.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\UserControls\InfoCard.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\thongKe.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Views\thongKe.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\FormNhanVien\main.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\FormNhanVien\main.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiPhong.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongTinNVien.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiPhong.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongTinNVien.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\chiTietPhieuThue.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\PageChild\chiTietPhieuThue.baml
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Login\LoginForm.g.cs
+D:\Dự án tốt nghiệp\DuAn_QuanLiKhachSan\obj\Debug\Login\LoginForm.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DuAn_QuanLiKhachSan.exe.config
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DuAn_QuanLiKhachSan.exe
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DuAn_QuanLiKhachSan.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\FontAwesome.Sharp.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.Wpf.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignColors.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.xml
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.Wpf.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\LiveCharts.Wpf.xml
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignColors.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.csproj.AssemblyReference.cache
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Icons\Icons.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\MainStyles\Styles.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Themes\DarkTheme.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Themes\LightTheme.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\FormNhanVien\main.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Login\LoginForm.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\MainWindow.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\chiTietPhieuThue.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\phieuDatPhong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themDichVu.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiDichVu.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiPhong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themNhanVien.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themPhong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongTinNVien.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongtinPhong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\xuatHoaDon.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\UserControls\InfoCard.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\DatPhong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\DialogCustoms.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\DichVu.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\HoaDon.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\KhachHang.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\LoaiPhong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\NhanVien.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\Phong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\thongKe.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\trangChu.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\App.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan_MarkupCompile.cache
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan_MarkupCompile.lref
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\App.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\FormNhanVien\main.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Login\LoginForm.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\MainWindow.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\chiTietPhieuThue.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\phieuDatPhong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themDichVu.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiDichVu.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themLoaiPhong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themNhanVien.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themPhong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongTinNVien.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\thongtinPhong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\xuatHoaDon.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\UserControls\InfoCard.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\DatPhong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\DialogCustoms.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\DichVu.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\HoaDon.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\KhachHang.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\LoaiPhong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\NhanVien.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\Phong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\thongKe.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\trangChu.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.g.resources
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.Properties.Resources.resources
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.csproj.GenerateResource.cache
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.csproj.CoreCompileInputs.cache
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_Qua.256F2908.Up2Date
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.exe
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\DuAn_QuanLiKhachSan.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\BUS_QLKS.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DAL_QLKS.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DTO_QLKS.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\BUS_QLKS.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DAL_QLKS.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DTO_QLKS.pdb
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\EntityFramework.dll
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DAL_QLKS.dll.config
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\DTO_QLKS.dll.config
+D:\Code\C#\DuAn_QuanLiKhachSan\bin\Debug\EntityFramework.xml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\EditLoaiPhong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\EditLoaiPhong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\DSPhietDatphong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\EditPhieudatphong.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\DSPhietDatphong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\EditPhieudatphong.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themkhachhangg.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themkhachhangg.baml

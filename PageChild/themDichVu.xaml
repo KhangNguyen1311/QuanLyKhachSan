@@ -1,0 +1,62 @@
+﻿<Window x:Class="DuAn_QuanLiKhachSan.PageChild.themDichVu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DuAn_QuanLiKhachSan.PageChild"
+        mc:Ignorable="d"
+           Height="360" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
+    <Border Background="{DynamicResource SecundaryBackgroundColor}"  CornerRadius="20" BorderThickness="2" BorderBrush="#7f7cf1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
+                <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
+            </StackPanel>
+
+            <TextBlock Grid.Row="1" Text="THÊM DỊCH VỤ MỚI" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Vertical" Margin="20 0">
+                        <Label Content="MÃ DỊCH VỤ" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="MaDichVu" Tag="Mã dịch vụ tự động" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" IsEnabled="False" Foreground="{DynamicResource PrimaryTextColor}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="20 0">
+                        <Label Content="TÊN DỊCH VỤ" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="TenDichVu" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="20 0">
+                        <Label Content="LOẠI DỊCH VỤ" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <ComboBox x:Name="loaiDichVu_combo" HorizontalAlignment="Left" Width="300" FontSize="15" Height="32" Foreground="{DynamicResource PrimaryTextColor}" Style="{DynamicResource ComboBoxFlatStyle}">
+
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="1">
+                    <StackPanel Orientation="Vertical" Margin="20 0">
+                        <Label Content="GIÁ BÁN" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="GiaBan" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="140" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" PreviewTextInput="GiaBan_PreviewTextInput"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Right" Margin="0 0 20 0">
+                <Button x:Name="themLoaiDichVu" Content="Thêm loại dịch vụ" Style="{DynamicResource MainBtn}" Width="200" Click="themLoaiDichVu_Click"/>
+                <Button Content="Lưu" Style="{DynamicResource MainBtn}" Click="Button_Click"/>
+                <Button x:Name="Xoa_btn" Content="Xóa" Style="{DynamicResource MainBtn}" Click="Xoa_btn_Click"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</Window>
