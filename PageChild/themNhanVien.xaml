@@ -39,7 +39,8 @@
                             <Label Content="TÊN NHÂN VIÊN" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <TextBox x:Name="txt_TenNV" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="txt_TenNV" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" TextChanged="txt_TenNV_TextChanged"  />
+                        <TextBlock x:Name="errorTenv" Foreground="Red"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
@@ -110,7 +111,8 @@
                             <Label Content="MẬT KHẨU" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage  Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <TextBox x:Name="txt_MatKhau" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" />
+                        <TextBox x:Name="txt_MatKhau" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" TextChanged="txt_MatKhau_TextChanged" />
+                        <TextBlock x:Name="errorMatKhau" Foreground="Red"/>
                     </StackPanel>
                 </StackPanel>
 

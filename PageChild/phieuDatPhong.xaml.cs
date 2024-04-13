@@ -34,6 +34,20 @@ namespace DuAn_QuanLiKhachSan.PageChild
         static BUS_ChiTietPhieuDatPhong bUS_ChiTietphieudatphong = new BUS_ChiTietPhieuDatPhong();
         public event EventHandler ChildClosed;
 
+
+        class CTPDP_Item
+        {
+            public string mapdp { get; set; }
+            public string map { get; set; }
+            public double tonggiatri { get; set; }
+            public string ngaydat { get; set; }
+            public string ngayketthuc { get; set; }
+            public string giodat { get; set; }
+            public string gioketthuc { get; set; }
+            public string tinhtrang { get; set; }
+            public int songuoi { get; set; }
+        }
+
         public phieuDatPhong()
         {
             InitializeComponent();
@@ -130,17 +144,16 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
 
 
-                    double tonggiatri = loaiPhong.GiaTheoGio * timeDifferenceInHours + loaiPhong.GiaTheoNgay * dateDifferenceInDays;
-                    ChiTietPhieuDatPhong chiTietPhieuDatPhong = new ChiTietPhieuDatPhong
-                    {
-                        MaPhong = phong.MaPhong,
-                        GioDat = gioDat.TimeOfDay,
-                        GioKetThuc = gioKetThuc.TimeOfDay,
-                        NgayDat = ngayDat,
-                        NgayKetThuc = ngayKetThuc,
-                        TongGiaTri = tonggiatri
+                    double tongGiatri = loaiPhong.GiaTheoGio * timeDifferenceInHours + loaiPhong.GiaTheoNgay * dateDifferenceInDays;
+                    CTPDP_Item chiTietPhieuDatPhong = new CTPDP_Item{
+                        map = phong.MaPhong,
+                        giodat = gioDat.TimeOfDay.ToString(),
+                        gioketthuc = gioKetThuc.TimeOfDay.ToString(),
+                        ngaydat = ngayDat.ToString("dd/MM/yyyy"),
+                        ngayketthuc = ngayKetThuc.ToString("dd/MM/yyyy"),
+                        tonggiatri = tongGiatri
                     };
-
+                  
                     PhongChon.Items.Add(chiTietPhieuDatPhong);
 
 
@@ -171,7 +184,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
                     foreach (var row1 in PhongChon.Items)
                     {
                         var dataRow = PhongChon.ItemContainerGenerator.ContainerFromItem(row1) as DataGridRow;
-                        if (dataRow != null && (dataRow.Item as ChiTietPhieuDatPhong)?.MaPhong == text)
+                        if (dataRow != null && (dataRow.Item as CTPDP_Item)?.map == text)
                         {
                             PhongChon.Items.Remove(row1);
                             break;
@@ -184,59 +197,70 @@ namespace DuAn_QuanLiKhachSan.PageChild
         }
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            DTO_QLKS.PhieuDatPhong phieu = new DTO_QLKS.PhieuDatPhong
+            if (!ngaydat.SelectedDate.HasValue || !ngayketthuc.SelectedDate.HasValue || !giodat.SelectedTime.HasValue || !gioketthuc.SelectedTime.HasValue || khachhang_box.SelectedValue == null || nhanvien_box.SelectedValue == null)
             {
-                MaKH = khachhang_box.SelectedValue.ToString(),
-                MaNV = nhanvien_box.SelectedValue.ToString(),
-            };
-            bUS_PhieuDatPhong.Insert(phieu);
-
-            DTO_QLKS.PhieuDatPhong ph = bUS_PhieuDatPhong.SelectAll().LastOrDefault();
-            for (int i = 0; i < PhongChon.Items.Count; i++)
-            {
-                ChiTietPhieuDatPhong temp = new ChiTietPhieuDatPhong();
-                temp.MaPDP = ph.MaPDP;
-                temp.SoNguoi = int.Parse(txt_songuoi.Text);
-                var row = (DataGridRow)PhongChon.ItemContainerGenerator.ContainerFromIndex(i);
-                if (row != null)
-                {
-                    var cell = PhongChon.Columns[0].GetCellContent(row) as TextBlock;
-                    if (cell != null)
-                    {
-                        temp.MaPhong = cell.Text;
-                    }
-                    cell = PhongChon.Columns[1].GetCellContent(row) as TextBlock;
-                    if (cell != null)
-                    {
-                        temp.NgayDat = DateTime.Parse(cell.Text);
-                    }
-                    cell = PhongChon.Columns[2].GetCellContent(row) as TextBlock;
-                    if (cell != null)
-                    {
-                        temp.NgayKetThuc = DateTime.Parse(cell.Text);
-                    }
-                    cell = PhongChon.Columns[3].GetCellContent(row) as TextBlock;
-                    if (cell != null)
-                    {
-                        DateTime temp1 = DateTime.Parse(cell.Text);
-                        temp.GioDat = temp1.TimeOfDay;
-                    }
-                    cell = PhongChon.Columns[4].GetCellContent(row) as TextBlock;
-                    if (cell != null)
-                    {
-                        DateTime temp1 = DateTime.Parse(cell.Text);
-                        temp.GioKetThuc = temp1.TimeOfDay;
-                    }
-                    cell = PhongChon.Columns[5].GetCellContent(row) as TextBlock;
-                    if (cell != null)
-                    {
-                        temp.TongGiaTri = float.Parse(cell.Text);
-                    }
-                }
-                bUS_ChiTietphieudatphong.Insert(temp);
+                var thongba = new DialogCustoms("Vui lòng điền đủ thông tin", "Thông báo",DialogCustoms.OK);
+                thongba.ShowDialog();
             }
-         
+            else
+            {
+                DTO_QLKS.PhieuDatPhong phieu = new DTO_QLKS.PhieuDatPhong
+                {
+                    MaKH = khachhang_box.SelectedValue.ToString(),
+                    MaNV = nhanvien_box.SelectedValue.ToString(),
+                };
+                bUS_PhieuDatPhong.Insert(phieu);
+                DTO_QLKS.PhieuDatPhong ph = bUS_PhieuDatPhong.SelectAll().LastOrDefault();
+                for (int i = 0; i < PhongChon.Items.Count; i++)
+                {
+                    ChiTietPhieuDatPhong temp = new ChiTietPhieuDatPhong();
+                    temp.MaPDP = ph.MaPDP;
+                    temp.SoNguoi = int.Parse(txt_songuoi.Text);
+                    var row = (DataGridRow)PhongChon.ItemContainerGenerator.ContainerFromIndex(i);
+                    if (row != null)
+                    {
+                        var cell = PhongChon.Columns[0].GetCellContent(row) as TextBlock;
+                        if (cell != null)
+                        {
+                            temp.MaPhong = cell.Text;
+                        }
+                        cell = PhongChon.Columns[1].GetCellContent(row) as TextBlock;
+                        if (cell != null)
+                        {
+                            temp.NgayDat = DateTime.Parse(cell.Text);
+                        }
+                        cell = PhongChon.Columns[2].GetCellContent(row) as TextBlock;
+                        if (cell != null)
+                        {
+                            temp.NgayKetThuc = DateTime.Parse(cell.Text);
+                        }
+                        cell = PhongChon.Columns[3].GetCellContent(row) as TextBlock;
+                        if (cell != null)
+                        {
+                            DateTime temp1 = DateTime.Parse(cell.Text);
+                            temp.GioDat = temp1.TimeOfDay;
+                        }
+                        cell = PhongChon.Columns[4].GetCellContent(row) as TextBlock;
+                        if (cell != null)
+                        {
+                            DateTime temp1 = DateTime.Parse(cell.Text);
+                            temp.GioKetThuc = temp1.TimeOfDay;
+                        }
+                        cell = PhongChon.Columns[5].GetCellContent(row) as TextBlock;
+                        if (cell != null)
+                        {
+                            temp.TongGiaTri = float.Parse(cell.Text);
+                        }
+                    }
+                    bUS_ChiTietphieudatphong.Insert(temp);
+                }
+                var thongba = new DialogCustoms("Tạo thành công", "Thông báo", DialogCustoms.OK);
+                thongba.ShowDialog();
 
+            }
+
+
+           
         }
 
         private void ngaydat_SelectedDateChanged(object sender, SelectionChangedEventArgs e)

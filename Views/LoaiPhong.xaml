@@ -22,7 +22,7 @@
             <TextBox x:Name="txt_searchRoom" Tag="Tìm loại phòng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" />
             <fa:IconImage Icon="Search" Style="{DynamicResource Icon}" Height="26" Width="26" Margin="-40 0 0 0"/>
         </StackPanel>
-        <Button x:Name="btn_themLoaiPhong" Content="THÊM LOẠI PHÒNG" Grid.Column="2" Width="200" Style="{DynamicResource MainBtn}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btn_themLoaiPhong_Click" Margin="5,0,0,0"/>
+        <Button x:Name="btn_themLoaiPhong" Content="THÊM LOẠI PHÒNG" Grid.Column="4" Width="200" Style="{DynamicResource MainBtn}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Click="btn_themLoaiPhong_Click" Margin="5,0,0,0"/>
 
         <DataGrid x:Name="DatagridLoaiPhong" Grid.Row="1" Grid.ColumnSpan="3" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" >
             <DataGrid.Columns>

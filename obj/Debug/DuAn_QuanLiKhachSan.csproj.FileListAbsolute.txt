@@ -184,3 +184,5 @@ D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\DSPhietDatphong.baml
 D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\EditPhieudatphong.baml
 D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themkhachhangg.g.cs
 D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\PageChild\themkhachhangg.baml
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\SettingPage.g.cs
+D:\Code\C#\DuAn_QuanLiKhachSan\obj\Debug\Views\SettingPage.baml

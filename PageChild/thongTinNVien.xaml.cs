@@ -42,7 +42,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
 
             maNV = manv;
-            NhanVien = bUS_NhanVien.SelectAll().Where(c=>c.MaNV==maNV).FirstOrDefault();
+            NhanVien = bUS_NhanVien.SelectAll().Where(c => c.MaNV == maNV).FirstOrDefault();
 
 
             InitializeComponent();
@@ -55,6 +55,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
+            ChildClosed?.Invoke(this, EventArgs.Empty);
             Close();
         }
 
@@ -201,7 +202,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
 
 
-            if (errorCCCD.Text.Length != 0 || errorEmail.Text.Length != 0 || errorSDT.Text.Length != 0)
+            if (errorCCCD.Text.Length != 0 || errorEmail.Text.Length != 0 || errorSDT.Text.Length != 0 || errorTenv.Text.Length != 0)
 
             {
                 // Hiển thị thông báo lỗi
@@ -227,7 +228,6 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 bUS_NhanVien.Update(NhanVien);
                 System.Windows.MessageBox.Show("Cập nhập thành công");
 
-                ChildClosed?.Invoke(this, EventArgs.Empty);
 
                 load();
             }
@@ -351,6 +351,61 @@ namespace DuAn_QuanLiKhachSan.PageChild
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             // Sử dụng Regex.IsMatch để kiểm tra chuỗi
             return Regex.IsMatch(email, pattern);
+        }
+
+        private void txt_TenNV_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            char[] specialcharAr = { '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '}', '[', ']', ';', ':', '\'', '\"', '|', '\\', ',', '<', '.', '>', '?', '/', '`', '~' };
+
+            var textBox = sender as System.Windows.Controls.TextBox;
+            if (textBox != null)
+            {
+                // Loại bỏ ký tự là số và cập nhật lại Text của TextBox
+                textBox.Text = new string(textBox.Text.Where(c => !char.IsDigit(c) && !specialcharAr.Contains(c)).ToArray());
+
+                // Di chuyển con trỏ về cuối chuỗi để người dùng có thể tiếp tục nhập
+                textBox.CaretIndex = textBox.Text.Length;
+
+
+
+
+            }
+        }
+        private bool IsTextAllowed(string text)
+        {
+            Regex regex = new Regex("[^a-zA-Z+]");
+            return regex.IsMatch(text);
+
+        }
+
+        private void txt_Email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as System.Windows.Controls.TextBox;
+            if (textBox != null)
+            {
+                // Kiểm tra xem text trong textbox có kết thúc bằng "@gmail.com" hay không.
+                if (!IsValidemail(textBox.Text))
+                {
+                    // Hiển thị thông báo lỗi hoặc xử lý tùy thuộc vào yêu cầu.
+                    errorEmail.Text = "Email sai định dạng!!";
+                }
+                else
+                {
+                    errorEmail.Text = "";
+                }
+
+            }
+        }
+
+        public static bool IsValidemail(string email)
+        {
+
+            // Biểu thức chính quy cho địa chỉ email
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            // Sử dụng Regex.IsMatch để kiểm tra chuỗi
+            return Regex.IsMatch(email, pattern);
+
+
         }
     }
 }

@@ -22,20 +22,21 @@ namespace DuAn_QuanLiKhachSan.PageChild
         List<DanhsachDv> dvItem = new List<DanhsachDv>();
         private string MaPhong { get; set; }
         private string MaPDP { get; set; }
-        private int SoNgay { get; set; }
-        private int SoGio { get; set; }
+
         public xuatHoaDon()
         {
             InitializeComponent();
             DataContext = this;
 
         }
-        public xuatHoaDon(string maPhong, string maPDP, int soNgay, int soGio) : this()
+        public xuatHoaDon(string maPhong, string maPDP) : this()
         {
+            var chiTietPhong = bus_Phong.SelectAllPhong().Where(p => p.MaPhong == maPhong && p.MaPDP==maPDP).FirstOrDefault();
+            int SoNgay = (int)chiTietPhong.SoNgay;
+            int SoGio = (int)chiTietPhong.SoGio;
             MaPhong = maPhong;
             MaPDP = maPDP;
-            SoNgay = soNgay;
-            SoGio = soGio;
+
             decimal giaTheoGio = 0;
             decimal giaTheoNgay = 0;
             List<ThongTinHoaDon> thongTinHD = bus_hoaDon.SelectChiTietHD().Where(c => c.MaPhong.Equals(MaPhong) && c.MaPDP.Equals(MaPDP)).ToList();

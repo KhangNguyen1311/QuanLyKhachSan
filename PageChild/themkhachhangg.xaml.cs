@@ -85,7 +85,17 @@ namespace DuAn_QuanLiKhachSan.PageChild
         private void sdthoai_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
+            if (textBox.Text.Length >= 10)
+            {
+                // Lưu lại vị trí con trỏ
+                int caretIndex = textBox.CaretIndex;
 
+                // Giữ lại 10 ký tự đầu tiên
+                textBox.Text = textBox.Text.Substring(0, 10);
+
+                // Đặt con trỏ ở cuối chuỗi
+                textBox.CaretIndex = caretIndex;
+            }
             // Loại bỏ mọi ký tự không phải số
             string input = textBox.Text;
             string pattern = "[^0-9]"; // Chỉ lấy các ký tự không phải số
@@ -99,6 +109,48 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
         }
 
+        private void cancuoc_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox.Text.Length >= 10)
+            {
+                // Lưu lại vị trí con trỏ
+                int caretIndex = textBox.CaretIndex;
 
+                // Giữ lại 10 ký tự đầu tiên
+                textBox.Text = textBox.Text.Substring(0, 10);
+
+                // Đặt con trỏ ở cuối chuỗi
+                textBox.CaretIndex = caretIndex;
+            }
+            // Loại bỏ mọi ký tự không phải số
+            string input = textBox.Text;
+            string pattern = "[^0-9]"; // Chỉ lấy các ký tự không phải số
+            string replacement = "";
+            string result = Regex.Replace(input, pattern, replacement);
+
+            // Cập nhật nội dung của TextBox
+            textBox.Text = result;
+            // Di chuyển con trỏ đến cuối chuỗi
+            textBox.CaretIndex = textBox.Text.Length;
+        }
+
+        private void ten_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            // Kiểm tra từng ký tự trong chuỗi
+            foreach (char c in textBox.Text)
+            {
+                // Nếu ký tự không phải là chữ cái
+                if (!char.IsLetter(c))
+                {
+                    // Loại bỏ ký tự không hợp lệ
+                    textBox.Text = textBox.Text.Remove(textBox.Text.IndexOf(c), 1);
+                    // Di chuyển con trỏ đến cuối chuỗi
+                    textBox.CaretIndex = textBox.Text.Length;
+                }
+            }
+        }
     }
 }

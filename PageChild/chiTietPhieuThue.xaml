@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DuAn_QuanLiKhachSan.PageChild"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-        Title="chiTietPhieuThue" Height="440" Width="980" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+        Title="chiTietPhieuThue" Height="440" Width="1000" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
 
     <Border Background="{DynamicResource SecundaryBackgroundColor}"  CornerRadius="20" BorderThickness="2" BorderBrush="#7f7cf1">
         <Grid>
@@ -32,20 +32,13 @@
                 <StackPanel Orientation="Vertical" >
                     <StackPanel Orientation="Vertical" Margin="0 0 0 6">
                         <TextBlock Text="KHÁCH HÀNG:" FontWeight="Bold" FontSize="14" Foreground="{DynamicResource PrimaryTextColor}"/>
-                        <TextBlock Text="Huỳnh Ngọc Luận" FontSize="16" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBlock x:Name="txt_khachhang" FontSize="16" Foreground="{DynamicResource PrimaryTextColor}"/>
                     </StackPanel>
                 </StackPanel>
-
                 <StackPanel Orientation="Vertical" Grid.Column="1">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="CHECKIN:" FontWeight="Bold" FontSize="14" Foreground="{DynamicResource PrimaryTextColor}"/>
-                        <TextBlock x:Name="checkIn" FontSize="16" Foreground="{DynamicResource PrimaryTextColor}"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Orientation="Vertical" Grid.Column="2">
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="NHÂN VIÊN:" FontWeight="Bold" FontSize="14" Foreground="{DynamicResource PrimaryTextColor}"/>
-                        <TextBlock x:Name="tenNv" FontSize="16" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBlock Text="NHÂN VIÊN TẠO PHIẾU:" FontWeight="Bold" FontSize="14" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBlock x:Name="txt_nhanvien" FontSize="16" Foreground="{DynamicResource PrimaryTextColor}"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
@@ -54,16 +47,36 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <DataGrid Grid.Row="1" Grid.ColumnSpan="2" Margin="10 0" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}">
+                <DataGrid x:Name="danhSachPhongTrong" Margin="10 0 10 0" Grid.ColumnSpan="2" Style="{DynamicResource DataGridStyle1}"  CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}"
+                            Height="500" Width="960">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="SỐ PHÒNG" Width="*" Binding="{Binding tenSP}" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="NGÀY BẮT ĐẦU" Width="*" Binding="{Binding Size}" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="NGÀY KẾT THÚC" Width="*" Binding="{Binding Size}" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="SỐ NGƯỜI" Width="*" Binding="{Binding Size}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Mã Phiếu đặt phòng" Width="*" Binding="{Binding mapdp}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Mã phòng" Width="*" Binding="{Binding map}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Tổng giá trị" Width="*" Binding="{Binding tonggiatri}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Ngày đặt " Width="*" Binding="{Binding ngaydat}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Ngày kết thúc" Width="*" Binding="{Binding ngayketthuc}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Giờ đặt" Width="*" Binding="{Binding giodat}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Giờ kết thúc" Width="*" Binding="{Binding gioketthuc}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Tình trạng" Width="*" Binding="{Binding tinhtrang}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Số Người" Width="*" Binding="{Binding songuoi}" IsReadOnly="True"/>
+                        <DataGridTemplateColumn Header="Tùy chỉnh" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource gridEditButton}" Margin="0 0 10 0" Click="Button_Click" >
+                                            <fa:IconImage Icon="Pencil" Style="{StaticResource gridBtnIcon}"/>
+                                        </Button>
+
+
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
 
 
                     </DataGrid.Columns>
                 </DataGrid>
+
             </Grid>
 
         </Grid>

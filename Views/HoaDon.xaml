@@ -23,11 +23,10 @@
 
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="txt_Tim" Tag="Tìm hóa đơn theo mã" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" TextChanged="txt_searchBill_TextChanged"/>
-                <fa:IconImage Icon="Search" Style="{DynamicResource Icon}" Height="26" Width="26"/>
-                <DatePicker Width="150" x:Name="dtpChonNgay"
-                   materialDesign:HintAssist.Hint="Tìm theo ngày"
+                <fa:IconImage Icon="Search" Style="{DynamicResource Icon}" Height="26" Width="26" Margin="-40 0 0 0"/>
+                <DatePicker Width="150" x:Name="dtpChonNgay" Margin="20 0 0 0"
                    Padding="10 10 10 5"
-                   Style="{StaticResource MaterialDesignFilledDatePicker}" 
+                   Style="{StaticResource MaterialDesignOutlinedDatePicker}" 
                    FirstDayOfWeek="Monday" 
                    Focusable="False" Foreground="{DynamicResource PrimaryTextColor}" FontSize="16" 
                    Background="{DynamicResource SecundaryBackgroundColor}" SelectedDateChanged="dtpChonNgay_SelectedDateChanged"/>

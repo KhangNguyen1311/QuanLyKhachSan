@@ -138,5 +138,10 @@ namespace DuAn_QuanLiKhachSan
             loadThongtinNhanvien();
             XacDinhVaiTro();
         }
+
+        private void rdSettings_Click(object sender, RoutedEventArgs e)
+        {
+            frameContent.Navigate(new SettingPage(nhanvien));
+        }
     }
 }

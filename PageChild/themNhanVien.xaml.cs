@@ -26,27 +26,30 @@ namespace DuAn_QuanLiKhachSan.PageChild
     public partial class themNhanVien : Window
     {
         static DAL_NhanVien DAL_NhanVIens = new DAL_NhanVien();
-
         static BUS_NhanVien bUS_NhanVIen = new BUS_NhanVien();
+        public event EventHandler ChildClosed;
+
         public string imagepath = "";
 
         public string imagename = "";
-        public event EventHandler ChildClosed;
 
         public themNhanVien()
         {
             InitializeComponent();
+            LoadData();
         }
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            ChildClosed?.Invoke(this, EventArgs.Empty);
+            ChildClosed.Invoke(this, EventArgs.Empty);
             Close();
         }
 
 
 
 
-      
+        public void LoadData()
+        {
+        }
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
@@ -90,7 +93,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
             string maNV = string.Format("DV{0:D4}", bUS_NhanVIen.laytatca().Count + 1);
 
 
-            if (errorCCCD.Text.Length != 0 || errorEmail.Text.Length != 0 || errorSDT.Text.Length != 0)
+            if (errorCCCD.Text.Length != 0 || errorEmail.Text.Length != 0 || errorSDT.Text.Length != 0 || errorTenv.Text.Length != 0)
 
             {
                 // Hiển thị thông báo lỗi
@@ -136,11 +139,11 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
                     // Thông báo kết quả
                     System.Windows.MessageBox.Show("Lưu thành công");
-                    ChildClosed ?.Invoke(this, EventArgs.Empty);
 
                     // Gọi hàm LoadData để cập nhật dữ liệu hiển thị (giả sử bạn đã có hàm LoadData)
 
 
+                    LoadData();
 
                     SaveImage();
                 }
@@ -218,10 +221,13 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
         public static bool IsValidEmail(string email)
         {
+
             // Biểu thức chính quy cho địa chỉ email
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             // Sử dụng Regex.IsMatch để kiểm tra chuỗi
             return Regex.IsMatch(email, pattern);
+
+
         }
 
         private void txt_Email_LostFocus(object sender, RoutedEventArgs e)
@@ -239,9 +245,51 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 {
                     errorEmail.Text = "";
                 }
-                // Nếu có, bạn có thể thêm logic xử lý khác ở đây.
+
             }
         }
+
+
+        private void txt_TenNV_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            char[] specialcharAr = { '!', '@', '#','$','%','^','&','*','(',')','_','-','+','=','{','}','[',']',';',':','\'','\"','|','\\',',','<','.','>','?','/','`','~' };
+
+            var textBox = sender as System.Windows.Controls.TextBox;
+            if (textBox != null)
+            {
+                // Loại bỏ ký tự là số và cập nhật lại Text của TextBox
+                textBox.Text = new string(textBox.Text.Where(c => !char.IsDigit(c) && !specialcharAr.Contains(c)).ToArray());
+
+                // Di chuyển con trỏ về cuối chuỗi để người dùng có thể tiếp tục nhập
+                textBox.CaretIndex = textBox.Text.Length;
+
+
+
+                
+            }
+           
+        }
+        private bool IsTextAllowed(string text)
+        {
+            Regex regex = new Regex("[^a-zA-Z+]");
+            return regex.IsMatch(text);
+
+        }
+
+        private void txt_MatKhau_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txt_MatKhau.Text = LoaiBoKyTuDacBiet(txt_MatKhau.Text);
+
+            // Đặt lại con trỏ về cuối chuỗi để tránh làm mất vị trí nhập liệu
+            txt_MatKhau.CaretIndex = txt_MatKhau.Text.Length;
+
+        }
+        public static string LoaiBoKyTuDacBiet(string input)
+        {
+            // Loại bỏ ký tự đặc biệt bằng cách chỉ giữ lại các ký tự chữ và số
+            return Regex.Replace(input, "[^a-zA-Z0-9]", "");
+        }
+
     }
 }
 

@@ -24,6 +24,7 @@ namespace DuAn_QuanLiKhachSan.Views
     public partial class HoaDon : Page
     {
         static BUS_HoaDon bUS_HoaDon = new BUS_HoaDon();
+        static BUS_ChiTietPhieuDatPhong bUS_ChiTietPhieuDatPhong = new BUS_ChiTietPhieuDatPhong();
         public HoaDon()
         {
             InitializeComponent();
@@ -61,11 +62,25 @@ namespace DuAn_QuanLiKhachSan.Views
 
         public void View_Click(object sender, EventArgs e)
         {
-            xuatHoaDon XuatHoaDon = new xuatHoaDon();
+            int rowindex = datagrid.SelectedIndex;
 
-            XuatHoaDon.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            XuatHoaDon.Show();
+            var row = (DataGridRow)datagrid.ItemContainerGenerator.ContainerFromIndex(rowindex);
+            if (row != null)
+            {
+                var cell = datagrid.Columns[0].GetCellContent(row) as TextBlock;
+
+                if (cell != null)
+                {
+                    DTO_QLKS.HoaDon hd = bUS_HoaDon.GetAll().Where(c => c.MaHD == cell.Text).FirstOrDefault();
+                    DTO_QLKS.ChiTietPhieuDatPhong ctpdp = bUS_ChiTietPhieuDatPhong.SelectAll().Where(c=>c.MaPDP == hd.MaPDP&&c.MaPhong==hd.MaPhong).FirstOrDefault();
+ 
+                    xuatHoaDon xuatHoaDon = new xuatHoaDon(hd.MaPhong,hd.MaPDP);
+                    xuatHoaDon.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                    xuatHoaDon.Show();
+
+                }
+            }
+
         }
-
     }
 }

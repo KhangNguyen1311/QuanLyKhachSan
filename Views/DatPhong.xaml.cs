@@ -65,7 +65,8 @@ namespace DuAn_QuanLiKhachSan.Views
                     string mapdp = cell.Text;
                     DTO_QLKS.PhieuDatPhong dp = BUS_datPhong.Selectall().Where(c => c.MaPDP == mapdp).FirstOrDefault();
                     BUS_datPhong.xoa(dp);
-                    MessageBox.Show("Xoa cc");
+                    var thongba = new DialogCustoms("Xoá thành công", "Thông báo", DialogCustoms.OK);
+                    thongba.ShowDialog();
                 }
             }
             loaddata();
@@ -78,13 +79,12 @@ namespace DuAn_QuanLiKhachSan.Views
             var row = (DataGridRow)dataGriddatphong.ItemContainerGenerator.ContainerFromIndex(index);
             if (row != null)
             {
-                Debug.WriteLine("CC");
                 var cell = dataGriddatphong.Columns[0].GetCellContent(row) as TextBlock;
 
                 if (cell != null)
                 {
                     string text = cell.Text;
-                    DSPhietDatphong edit = new DSPhietDatphong(text);
+                    chiTietPhieuThue edit = new chiTietPhieuThue(text);
                     edit.Show();
                 }
             }

@@ -1,5 +1,6 @@
 ﻿using BUS_QLKS;
 using DTO_QLKS;
+using DuAn_QuanLiKhachSan.Views;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -43,14 +44,22 @@ namespace DuAn_QuanLiKhachSan.Login
             string password = txt_password.Password;
             if(bUS_NhanVien.CheckLogin(email, password))
             {
-                NhanVien nhanvien = bUS_NhanVien.GetNhanVienByEmailAndPass(email, password);
+                DTO_QLKS.NhanVien nhanvien = bUS_NhanVien.GetNhanVienByEmailAndPass(email, password);
                 MainWindow mainWindow = new MainWindow(nhanvien);
                 mainWindow.Show();  
             }
             else
             {
-                MessageBox.Show("Email hoặc mật khẩu bị sai vui lòng nhập lại", "Thông báo!");
+                var ThongBao1 = new DialogCustoms("Email hoặc mật khẩu bị sai vui lòng nhập lại!", "Thông báo", DialogCustoms.OK);
+                ThongBao1.ShowDialog();
+
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            txt_email.Text = string.Empty;
+            txt_password.Password = string.Empty;
         }
     }
 }

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DuAn_QuanLiKhachSan.PageChild" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-      Title="EditLoaiPhong" Height="453" Width="680" WindowStyle="None" AllowsTransparency="True" Background="Transparent" >
+      Title="EditLoaiPhong" Height="500" Width="420" WindowStyle="None" AllowsTransparency="True" Background="Transparent" >
 
     <Grid>
         <Grid.RowDefinitions>
@@ -17,7 +17,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="30"/>
-                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="300"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
@@ -31,31 +31,31 @@
                     <StackPanel Orientation="Vertical" Margin="0,0,0,-105">
                         <StackPanel Orientation="Vertical" Margin="20 0">
                             <Label Content="SỐ LƯỢNG NGƯỜI" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                            <TextBox x:Name="txt_tenlp" Tag="Nhập số lượng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="756" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                            <TextBox x:Name="txt_tenlp" Tag="Nhập số lượng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="340" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="20 0">
                             <Label Content="NGÀY BẮT ĐẦU" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                            <DatePicker x:Name="ngaydat" />
+                            <DatePicker x:Name="ngaydat" HorizontalAlignment="Left" Width="340" Style="{StaticResource MaterialDesignOutlinedDatePicker}"  Padding="10 10 10 5"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="20 0">
                             <Label Content="NGÀY KẾT THÚC" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                            <DatePicker x:Name="ngayketthuc"/>
+                            <DatePicker x:Name="ngayketthuc" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignOutlinedDatePicker}"  Padding="10 10 10 5" Width="340"/>
                         </StackPanel>
 
 
                         <StackPanel Orientation="Vertical" Margin="20 0">
                             <Label Content="GIỜ NHẬN PHÒNG" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                            <materialDesign:TimePicker x:Name="giodat" Is24Hours="True" SelectedTimeFormat="Long"/>
+                            <materialDesign:TimePicker x:Name="giodat" Style="{StaticResource MaterialDesignOutlinedTimePicker}" HorizontalAlignment="Left" Padding="10 10 10 5" Width="340"  Is24Hours="True" SelectedTimeFormat="Long"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="20 0">
                             <Label Content="GIỜ TRẢ PHÒNG" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                            <materialDesign:TimePicker x:Name="gioketthuc" Is24Hours="True" SelectedTimeFormat="Long"/>
+                            <materialDesign:TimePicker x:Name="gioketthuc" Style="{StaticResource MaterialDesignOutlinedTimePicker}" HorizontalAlignment="Left"  Padding="10 10 10 5" Width="340" Is24Hours="True" SelectedTimeFormat="Long"/>
                         </StackPanel>
                     </StackPanel>
 
 
                 </Grid>
-                <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Right" Margin="0,92,20,0" Width="128">
+                <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Right" Margin="0 0 20 0" Width="128">
                     <Button Content="Lưu" Style="{DynamicResource MainBtn}" Click="Button_Click"/>
 
                 </StackPanel>

@@ -60,7 +60,7 @@
             </Grid>
             <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Right" Margin="0 0 60 0">
                 <Button Content="Đăng nhập" Style="{DynamicResource MainBtn}" Click="Button_Click"/>
-                <Button Content="Quên mật khẩu" Style="{DynamicResource MainBtn}" Width="135"/>
+                <Button Content="Xoá" Style="{DynamicResource MainBtn}" Width="135" Click="Button_Click_1"/>
             </StackPanel>
 
         </Grid>

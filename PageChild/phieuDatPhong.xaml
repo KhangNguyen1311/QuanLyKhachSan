@@ -26,7 +26,7 @@
 
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="360"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Vertical" Margin="0,0,0,114">
@@ -37,7 +37,7 @@
                             <Label Content="Số người" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <TextBox x:Name="txt_songuoi"  Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="360" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="txt_songuoi"  Style="{DynamicResource TextBoxStyle}" Height="34" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
@@ -45,7 +45,7 @@
                             <Label Content="Mã khách hàng" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <ComboBox  x:Name="khachhang_box" HorizontalAlignment="Left" Width="360" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" />
+                        <ComboBox  x:Name="khachhang_box" Style="{DynamicResource ComboBoxFlatStyle}" Height="34" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" />
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="20 0">
@@ -53,7 +53,7 @@
                             <Label Content="Mã nhân viên" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <ComboBox x:Name="nhanvien_box"  HorizontalAlignment="Left" Width="360" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <ComboBox x:Name="nhanvien_box" Style="{DynamicResource ComboBoxFlatStyle}" Height="34"  HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
                         <StackPanel Orientation="Horizontal"/>
@@ -89,22 +89,22 @@
                             <StackPanel Orientation="Horizontal">
                                 <StackPanel Orientation="Vertical" Margin="20 0" Width="160">
                                     <Label Content="NGÀY BẮT ĐẦU" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                                    <DatePicker x:Name="ngaydat" />
+                                    <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}"  Padding="10 10 10 5" FontSize="16"  x:Name="ngaydat" SelectedDateChanged="ngaydat_SelectedDateChanged" />
                                 </StackPanel>
                                 <StackPanel Orientation="Vertical" Margin="20 0" Width="160">
                                     <Label Content="NGÀY KẾT THÚC" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                                    <DatePicker x:Name="ngayketthuc"/>
+                                    <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}"  Padding="10 10 10 5" FontSize="16"  SelectedDateChanged="ngaydat_SelectedDateChanged" x:Name="ngayketthuc"/>
                                 </StackPanel>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1">
                                 <StackPanel Orientation="Vertical" Margin="20 0" Width="160">
                                     <Label Content="GIỜ NHẬN PHÒNG" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                                    <materialDesign:TimePicker x:Name="giodat"/>
+                                    <materialDesign:TimePicker Style="{StaticResource MaterialDesignOutlinedTimePicker}"  Padding="10 10 10 5" FontSize="16"  Is24Hours="True" x:Name="giodat" LostFocus="giodat_LostFocus"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Vertical" Margin="20 0" Width="160">
                                     <Label Content="GIỜ TRẢ PHÒNG" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                                    <materialDesign:TimePicker x:Name="gioketthuc"/>
+                                    <materialDesign:TimePicker Style="{StaticResource MaterialDesignOutlinedTimePicker}"  Padding="10 10 10 5" FontSize="16"  Is24Hours="True" x:Name="gioketthuc" LostFocus="gioketthuc_LostFocus"/>
                                 </StackPanel>
                             </StackPanel>
                         </Grid>
@@ -150,12 +150,12 @@
                             <DataGrid x:Name="PhongChon" Margin="10 0 10 0" Grid.ColumnSpan="2" Style="{DynamicResource DataGridStyle1}"  CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}"
                             Height="190" Width="950">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="MÃ PHÒNG" Width="*" Binding="{Binding MaPhong}" IsReadOnly="True"/>
-                                    <DataGridTextColumn Header="NGÀY ĐẶT" Width="*" Binding="{Binding NgayDat}" IsReadOnly="True"/>
-                                    <DataGridTextColumn Header="NGÀY KẾT THÚC" Width="*" Binding="{Binding NgayKetThuc}" IsReadOnly="True"/>
-                                    <DataGridTextColumn Header="GIỜ ĐẶT" Width="*" Binding="{Binding GioDat}" IsReadOnly="True"/>
-                                    <DataGridTextColumn Header="GIỜ KẾT THÚC" Width="*" Binding="{Binding GioKetThuc }" IsReadOnly="True"/>
-                                    <DataGridTextColumn Header="TỔNG GIÁ TRỊ" Width="*" Binding="{Binding TongGiaTri}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="MÃ PHÒNG" Width="*" Binding="{Binding map}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="NGÀY ĐẶT" Width="*" Binding="{Binding ngaydat}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="NGÀY KẾT THÚC" Width="*" Binding="{Binding ngayketthuc}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="GIỜ ĐẶT" Width="*" Binding="{Binding giodat}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="GIỜ KẾT THÚC" Width="*" Binding="{Binding gioketthuc }" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="TỔNG GIÁ TRỊ" Width="*" Binding="{Binding tonggiatri}" IsReadOnly="True"/>
 
 
                                     <DataGridTemplateColumn Header="TÙY CHỈNH" IsReadOnly="True" Width="auto">

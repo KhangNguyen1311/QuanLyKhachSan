@@ -36,8 +36,7 @@
                             <Label Content="TÊN KHÁCH HÀNG" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <TextBox x:Name="ten"  Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}">
-
+                        <TextBox x:Name="ten"  Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" TextChanged="ten_TextChanged">
                         </TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
@@ -55,7 +54,7 @@
                             <Label Content="CĂN CƯỚC CÔNG DÂN" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="ContactCard" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <TextBox  x:Name="cancuoc" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox  x:Name="cancuoc" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" TextChanged="cancuoc_TextChanged" />
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Grid.Column="1">

@@ -32,10 +32,8 @@
                     <DataGridTextColumn Header="MÃ PHIẾU ĐẶT PHÒNG" Width="*" Binding="{Binding MaPDP}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="MÃ KHÁCH HÀNG" Width="*" Binding="{Binding MaKH}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="MÃ NHÂN VIÊN" Width="*" Binding="{Binding MaNV}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="TỔNG GIÁ TRỊ" Width="*" Binding="{Binding TongGiaTri}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="NGÀY TẠO " Width="*" Binding="{Binding NgayTao}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="SỐ NGƯỜI  " Width="*" Binding="{Binding SoNguoi}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="TÌNH TRẠNG  " Width="*" Binding="{Binding TinhTrang}" IsReadOnly="True"/>
+                   
                     <DataGridTemplateColumn Header="XÓA" IsReadOnly="True" Width="auto">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

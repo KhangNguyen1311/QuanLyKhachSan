@@ -43,15 +43,12 @@
                         <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Auto"  CanContentScroll="False">
                             <DataGrid x:Name="danhSachPhongTrong" Margin="10 0 10 0" Grid.ColumnSpan="2" Style="{DynamicResource DataGridStyle1}"  CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}"
                             Height="500" Width="939">
-
-
-
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Mã Phiếu đặt phòng" Width="*" Binding="{Binding MaPDP}" IsReadOnly="True"/>
                                     <DataGridTextColumn Header="Mã phòng" Width="*" Binding="{Binding MaPhong}" IsReadOnly="True"/>
                                     <DataGridTextColumn Header="Tổng giá trị" Width="*" Binding="{Binding TongGiaTri}" IsReadOnly="True"/>
                                     <DataGridTextColumn Header="Ngày đặt " Width="*" Binding="{Binding NgayDat}" IsReadOnly="True"/>
-                                    <DataGridTextColumn Header="Ngày kết thúc" Width="*" Binding="{Binding NgayketThuc}" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Ngày kết thúc" Width="*" Binding="{Binding NgayKetThuc}" IsReadOnly="True"/>
                                     <DataGridTextColumn Header="Giờ đặt" Width="*" Binding="{Binding GioDat}" IsReadOnly="True"/>
                                     <DataGridTextColumn Header="Giờ kết thúc" Width="*" Binding="{Binding GioKetThuc}" IsReadOnly="True"/>
                                     <DataGridTemplateColumn Header="Tùy chỉnh" IsReadOnly="True" Width="*">

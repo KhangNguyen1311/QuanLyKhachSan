@@ -151,9 +151,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
         private void btn_ThanhToan_Click(object sender, RoutedEventArgs e)
         {
-            var chiTietPhong = bus_Phong.SelectAllPhong().FirstOrDefault(p => p.MaPhong == MaPhong && p.TinhTrang.Equals(TinhTrangPhong));
-            int soNgay = (int)chiTietPhong.SoNgay;
-            int soGio = (int)chiTietPhong.SoGio;
+       
 
             DTO_QLKS.ChiTietPhieuDatPhong chiTietPDP = bus_chiTietPhieuDatPhong.SelectAll().Where(c => c.MaPDP.Equals(MaPDP) && c.MaPhong.Equals(MaPhong)).FirstOrDefault();
             if (chiTietPDP != null)
@@ -166,7 +164,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 if (ThongBao.ShowDialog() == true)
                 {
 
-                    xuatHoaDon xuatHoaDon = new xuatHoaDon(MaPhong, MaPDP, soNgay, soGio);
+                    xuatHoaDon xuatHoaDon = new xuatHoaDon(MaPhong, MaPDP);
                     xuatHoaDon.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                     xuatHoaDon.Show();
 
