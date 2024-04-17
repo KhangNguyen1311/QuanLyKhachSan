@@ -21,7 +21,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="txt_searchRoom" Tag="Tìm phiếu đặt phòng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15"/>
+                <TextBox x:Name="txt_searchRoom" Tag="Tìm phiếu đặt phòng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" TextChanged="txt_searchRoom_TextChanged"/>
                 <fa:IconImage Icon="Search" Style="{DynamicResource Icon}" Height="26" Width="26" Margin="-40 0 0 0"/>
             </StackPanel>
             <Button x:Name="btn_datPhong" Content="ĐẶT PHÒNG" Grid.Column="1" Width="200" Style="{DynamicResource MainBtn}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Click="btn_datPhong_Click"/>

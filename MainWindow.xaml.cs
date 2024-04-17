@@ -40,15 +40,24 @@ namespace DuAn_QuanLiKhachSan
         }
         public void XacDinhVaiTro()
         {
-            if(nhanvien.VaiTro.ToLower() != "quản lý")
+            if(nhanvien.VaiTro.ToLower() == "giám đốc")
             {
-                rdStaff.Visibility = Visibility.Hidden;
+                rdRoom.Visibility = Visibility.Hidden;
+                rdKindOfRoom.Visibility = Visibility.Hidden;
+                rdBookroom.Visibility = Visibility.Hidden;
+                rdBills.Visibility = Visibility.Hidden;
+                rdClient.Visibility = Visibility.Hidden;
+                rdServices.Visibility = Visibility.Hidden;
+            }
+            else if(nhanvien.VaiTro.ToLower()=="quản lý")
+            {
                 rdChart.Visibility = Visibility.Hidden;
+
             }
             else
             {
-                rdStaff.Visibility = Visibility.Visible;
-                rdChart.Visibility = Visibility.Visible;
+                rdChart.Visibility= Visibility.Hidden;
+                rdStaff.Visibility= Visibility.Hidden;
             }
         }
         public void loadThongtinNhanvien()

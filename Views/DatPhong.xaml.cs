@@ -89,6 +89,13 @@ namespace DuAn_QuanLiKhachSan.Views
                 }
             }
         }
+
+        private void txt_searchRoom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string mapdp = txt_searchRoom.Text.ToLower();
+            List<PhieuDatPhong> pdp = BUS_datPhong.Selectall().Where(c=>c.MaPDP.ToLower().Contains(mapdp)).ToList();
+            dataGriddatphong.ItemsSource = pdp;
+        }
     }
 
 }

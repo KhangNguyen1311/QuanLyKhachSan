@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -283,6 +284,22 @@ namespace DuAn_QuanLiKhachSan.PageChild
             kh.ChildClosed += ChildWindowClosed;
             kh.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             kh.Show();
+        }
+
+        private void txt_songuoi_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            
+            // Loại bỏ mọi ký tự không phải số
+            string input = textBox.Text;
+            string pattern = "[^0-9]"; // Chỉ lấy các ký tự không phải số
+            string replacement = "";
+            string result = Regex.Replace(input, pattern, replacement);
+
+            // Cập nhật nội dung của TextBox
+            textBox.Text = result;
+            // Di chuyển con trỏ đến cuối chuỗi
+            textBox.CaretIndex = textBox.Text.Length;
         }
     }
 }

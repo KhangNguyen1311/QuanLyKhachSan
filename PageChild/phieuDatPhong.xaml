@@ -37,7 +37,7 @@
                             <Label Content="Số người" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <TextBox x:Name="txt_songuoi"  Style="{DynamicResource TextBoxStyle}" Height="34" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="txt_songuoi"  Style="{DynamicResource TextBoxStyle}" Height="34" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" TextChanged="txt_songuoi_TextChanged"/>
 
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
