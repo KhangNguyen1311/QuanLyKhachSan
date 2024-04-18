@@ -26,17 +26,19 @@ namespace DuAn_QuanLiKhachSan.Views
     public partial class DatPhong : Page
     {
         static BUS_DatPhong BUS_datPhong = new BUS_DatPhong();
-        public DatPhong()
+        static BUS_ChiTietPhieuDatPhong bUS_ChiTietPhieuDatPhong = new BUS_ChiTietPhieuDatPhong();
+        static DTO_QLKS.NhanVien nhanVien= new DTO_QLKS.NhanVien();
+        public DatPhong(DTO_QLKS.NhanVien nv)
         {
             InitializeComponent();
-           
+            nhanVien = nv;
             loaddata();
         }
        
 
         private void btn_datPhong_Click(object sender, RoutedEventArgs e)
         {
-            phieuDatPhong phieuDatPhong = new phieuDatPhong();
+            phieuDatPhong phieuDatPhong = new phieuDatPhong(nhanVien);
             phieuDatPhong.ChildClosed += ChildWindowClosed;
             phieuDatPhong.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             phieuDatPhong.Show();
@@ -63,10 +65,20 @@ namespace DuAn_QuanLiKhachSan.Views
                 if (cell != null)
                 {
                     string mapdp = cell.Text;
-                    DTO_QLKS.PhieuDatPhong dp = BUS_datPhong.Selectall().Where(c => c.MaPDP == mapdp).FirstOrDefault();
-                    BUS_datPhong.xoa(dp);
-                    var thongba = new DialogCustoms("Xoá thành công", "Thông báo", DialogCustoms.OK);
-                    thongba.ShowDialog();
+
+                    List<ChiTietPhieuDatPhong> ctpdp = bUS_ChiTietPhieuDatPhong.SelectAll().Where(c=>c.MaPDP==mapdp).ToList();
+                    if (ctpdp.Count != 0)
+                    {
+                        var tb = new DialogCustoms("Vui lòng xoá chi tiết phiếu đặt phòng trước!", "Thông báo!", DialogCustoms.OK);
+                        tb.ShowDialog();
+                    }
+                    else
+                    {
+                        DTO_QLKS.PhieuDatPhong dp = BUS_datPhong.Selectall().Where(c => c.MaPDP == mapdp).FirstOrDefault();
+                        BUS_datPhong.xoa(dp);
+                        var thongba = new DialogCustoms("Xoá thành công", "Thông báo", DialogCustoms.OK);
+                        thongba.ShowDialog();
+                    }
                 }
             }
             loaddata();

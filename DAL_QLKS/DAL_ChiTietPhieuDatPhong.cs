@@ -58,5 +58,14 @@ namespace DAL_QLKS
                 return chitTietPDP;
             }
         }
+        public void Delete(ChiTietPhieuDatPhong ctpdp)
+        {
+            using (var db = new QL_KhachSanEntities())
+            {
+                db.ChiTietPhieuDatPhongs.Attach(ctpdp);
+                db.ChiTietPhieuDatPhongs.Remove(ctpdp);
+                db.SaveChanges();
+            }
+        }
     }
 }

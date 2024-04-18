@@ -63,7 +63,6 @@ namespace DuAn_QuanLiKhachSan.FormNhanVien
 
         private void rdBookroom_Click(object sender, RoutedEventArgs e)
         {
-            frameContent.Navigate(new DatPhong());
         }
 
         private void rdBills_Click(object sender, RoutedEventArgs e)

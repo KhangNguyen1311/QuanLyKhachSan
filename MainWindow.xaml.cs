@@ -101,7 +101,7 @@ namespace DuAn_QuanLiKhachSan
         private void rdBookroom_Click(object sender, RoutedEventArgs e)
         {
             
-            frameContent.Navigate(new DatPhong());
+            frameContent.Navigate(new Views.DatPhong(nhanvien));
 
         }
 

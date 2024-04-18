@@ -37,7 +37,6 @@ namespace DuAn_QuanLiKhachSan.Views
             txt_CCCD.IsReadOnly = true;
             txt_TenNV.IsReadOnly = true;
             txt_SDT.IsReadOnly = true;
-            txt_ChuVu.IsReadOnly = true;
 
         }
 
@@ -64,7 +63,6 @@ namespace DuAn_QuanLiKhachSan.Views
             txt_MaNV.Text = nhanVien.MaNV;
             txt_NgaySinh.Text = nhanVien.NgaySinh;
             txt_CCCD.Text = nhanVien.CCCD;
-            txt_ChuVu.Text = nhanVien.VaiTro;
             txt_DiaChi.Text = nhanVien.DiaChi;
             txt_Email.Text = nhanVien.Email;
             txt_SDT.Text = nhanVien.SDT;

@@ -21,6 +21,12 @@ CREATE VIEW DanhSachNhanVien AS
 
 GO
 
+CREATE VIEW DanhSachKhachHang AS
+	SELECT MaKH, TenKH,NgaySinh,(CASE Phai WHEN 0 THEN 'Nam' WHEN 1 THEN N'Nữ' END) AS [GioiTinh],DiaChi,SDT,MaCMT,QuocTich from KhachHang
+
+GO;
+
+
 CREATE VIEW DanhSachThongTinPhong AS
 SELECT
     MaPhong, 
@@ -154,9 +160,9 @@ RETURN
 GO
 
 create view ListDichVu as
-SELECT        LoaiDichVu.TenLoaiDV, DichVu.TenDV, DichVu.GiaTien,DichVu.MaDV
-FROM            DichVu INNER JOIN
-                         LoaiDichVu ON DichVu.MaLoaiDV = LoaiDichVu.MaLoaiDV
+	SELECT        LoaiDichVu.TenLoaiDV, DichVu.TenDV, DichVu.GiaTien,DichVu.MaDV
+	FROM            DichVu INNER JOIN
+							 LoaiDichVu ON DichVu.MaLoaiDV = LoaiDichVu.MaLoaiDV
 GO
 
 create view ListLoaiPhong as
@@ -164,38 +170,20 @@ SELECT        MaLoaiPhong, TenLoaiPhong, GiaTheoGio, GiaTheoNgay
 FROM            LoaiPhong						 
 GO
 
-CREATE VIEW ThongTinHoaDon AS
-SELECT
-    HD.MaHD,
-    HD.TongGiaTri,
-    HD.NgayInHD,
-    HD.MaPDP,
-    CTPDP.MaPhong,
-    P.MaLoaiPhong,
-    LP.GiaTheoGio,
-    LP.GiaTheoNgay,
-    DV.TenDV,
-    CTDV.MaDV,
-    CTDV.SoLuongDV,
-    DV.GiaTien,
-    CTDV.TongGiaTri AS ThanhTien,
-    CTPDP.SoNguoi
-FROM
-    HoaDon AS HD
-INNER JOIN
-    ChiTietPhieuDatPhong AS CTPDP ON HD.MaPDP = CTPDP.MaPDP
-INNER JOIN
-    Phong AS P ON CTPDP.MaPhong = P.MaPhong
-INNER JOIN
-    LoaiPhong AS LP ON P.MaLoaiPhong = LP.MaLoaiPhong
-INNER JOIN
-    PhieuDatPhong AS PDP ON CTPDP.MaPDP = PDP.MaPDP
-LEFT JOIN
-    ChiTietDichVuPhieuDatPhong AS CTDV ON CTPDP.MaPDP = CTDV.MaPDP AND CTPDP.MaPhong = CTDV.MaPhong
-LEFT JOIN
-    DichVu AS DV ON CTDV.MaDV = DV.MaDV;
+create view ThongTinHoaDon as
+SELECT        HD.MaHD, HD.TongGiaTri, HD.NgayInHD, HD.MaPDP ,CTPDP.MaPhong, P.MaLoaiPhong, LP.GiaTheoGio, LP.GiaTheoNgay, 
+				DV.TenDV, CTDV.MaDV, CTDV.SoLuongDV, DV.GiaTien, CTDV.TongGiaTri AS ThanhTien, CTPDP.SoNguoi,
+				CTPDP.NgayDat, CTPDP.NgayKetThuc,
+				   DATEDIFF(day, CTPDP.NgayDat, CTPDP.NgayKetThuc) AS SoNgay,
+				 DATEDIFF(day, CTPDP.NgayDat, CTPDP.NgayKetThuc) * 24 + DATEDIFF(hour, CTPDP.GioDat, CTPDP.GioKetThuc) as SoGio
+FROM            ChiTietDichVuPhieuDatPhong AS CTDV INNER JOIN
+                         ChiTietPhieuDatPhong AS CTPDP ON CTDV.MaPDP = CTPDP.MaPDP AND CTDV.MaPhong = CTPDP.MaPhong INNER JOIN
+                         HoaDon AS HD ON CTDV.MaPDP = HD.MaPDP INNER JOIN
+                         DichVu AS DV ON CTDV.MaDV = DV.MaDV INNER JOIN
+                         Phong AS P ON CTPDP.MaPhong = P.MaPhong INNER JOIN
+                         LoaiPhong AS LP ON P.MaLoaiPhong = LP.MaLoaiPhong INNER JOIN
+                         PhieuDatPhong as PDP ON CTPDP.MaPDP = PDP.MaPDP AND HD.MaPDP = PDP.MaPDP
 GO
-
 create view DichVuTheoPDP as
 SELECT        ChiTietDichVuPhieuDatPhong.MaPDP, ChiTietDichVuPhieuDatPhong.MaPhong, ChiTietDichVuPhieuDatPhong.MaDV, DichVu.TenDV, ChiTietDichVuPhieuDatPhong.SoLuongDV, ChiTietDichVuPhieuDatPhong.TongGiaTri, 
                          DichVu.GiaTien

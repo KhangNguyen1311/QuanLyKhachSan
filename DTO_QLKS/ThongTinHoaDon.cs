@@ -24,9 +24,13 @@ namespace DTO_QLKS
         public double GiaTheoNgay { get; set; }
         public string TenDV { get; set; }
         public string MaDV { get; set; }
-        public Nullable<int> SoLuongDV { get; set; }
-        public Nullable<double> GiaTien { get; set; }
-        public Nullable<double> ThanhTien { get; set; }
+        public int SoLuongDV { get; set; }
+        public double GiaTien { get; set; }
+        public double ThanhTien { get; set; }
         public int SoNguoi { get; set; }
+        public System.DateTime NgayDat { get; set; }
+        public System.DateTime NgayKetThuc { get; set; }
+        public Nullable<int> SoNgay { get; set; }
+        public Nullable<int> SoGio { get; set; }
     }
 }

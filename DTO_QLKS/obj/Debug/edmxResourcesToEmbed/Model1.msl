@@ -199,26 +199,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ThongTinHoaDons">
-      <EntityTypeMapping TypeName="QL_KhachSanModel.ThongTinHoaDon">
-        <MappingFragment StoreEntitySet="ThongTinHoaDon">
-          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
-          <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
-          <ScalarProperty Name="NgayInHD" ColumnName="NgayInHD" />
-          <ScalarProperty Name="MaPDP" ColumnName="MaPDP" />
-          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
-          <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
-          <ScalarProperty Name="GiaTheoGio" ColumnName="GiaTheoGio" />
-          <ScalarProperty Name="GiaTheoNgay" ColumnName="GiaTheoNgay" />
-          <ScalarProperty Name="TenDV" ColumnName="TenDV" />
-          <ScalarProperty Name="MaDV" ColumnName="MaDV" />
-          <ScalarProperty Name="SoLuongDV" ColumnName="SoLuongDV" />
-          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
-          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-          <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ViewHoaDonNhanVienPhieuDatPhongs">
       <EntityTypeMapping TypeName="QL_KhachSanModel.ViewHoaDonNhanVienPhieuDatPhong">
         <MappingFragment StoreEntitySet="ViewHoaDonNhanVienPhieuDatPhong">
@@ -263,5 +243,43 @@
     <FunctionImportMapping FunctionImportName="InsertPhong" FunctionName="QL_KhachSanModel.Store.InsertPhong" />
     <FunctionImportMapping FunctionImportName="InsertTienNghiPhong" FunctionName="QL_KhachSanModel.Store.InsertTienNghiPhong" />
     <FunctionImportMapping FunctionImportName="UpdatePhieuDatPhong" FunctionName="QL_KhachSanModel.Store.UpdatePhieuDatPhong" />
+    <EntitySetMapping Name="DanhSachKhachHangs">
+      <EntityTypeMapping TypeName="QL_KhachSanModel.DanhSachKhachHang">
+        <MappingFragment StoreEntitySet="DanhSachKhachHang">
+          <ScalarProperty Name="QuocTich" ColumnName="QuocTich" />
+          <ScalarProperty Name="MaCMT" ColumnName="MaCMT" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThongTinHoaDons">
+      <EntityTypeMapping TypeName="QL_KhachSanModel.ThongTinHoaDon">
+        <MappingFragment StoreEntitySet="ThongTinHoaDon">
+          <ScalarProperty Name="SoGio" ColumnName="SoGio" />
+          <ScalarProperty Name="SoNgay" ColumnName="SoNgay" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="NgayDat" ColumnName="NgayDat" />
+          <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
+          <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="SoLuongDV" ColumnName="SoLuongDV" />
+          <ScalarProperty Name="MaDV" ColumnName="MaDV" />
+          <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+          <ScalarProperty Name="GiaTheoNgay" ColumnName="GiaTheoNgay" />
+          <ScalarProperty Name="GiaTheoGio" ColumnName="GiaTheoGio" />
+          <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="MaPDP" ColumnName="MaPDP" />
+          <ScalarProperty Name="NgayInHD" ColumnName="NgayInHD" />
+          <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

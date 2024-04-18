@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,17 +36,22 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DTO_QLKS.LoaiPhong loaip = new DTO_QLKS.LoaiPhong
+
+            if (txt_giagio.Text.Length != 0 || txt_tenlp.Text.Length != 0 || giangay.Text.Length != 0)
             {
-                MaLoaiPhong = maloaip,
-                TenLoaiPhong = txt_tenlp.Text,
-                GiaTheoGio = double.Parse(txt_giagio.Text),
-                GiaTheoNgay = double.Parse(giangay.Text),
-            };
-            bus_loaiphong.Update(loaip);
-            ChildClosed.Invoke(this, EventArgs.Empty);
-            var ThongBao1 = new DialogCustoms("Lưu thành công!", "Thông báo", DialogCustoms.OK);
-            ThongBao1.ShowDialog();
+                DTO_QLKS.LoaiPhong loaip = new DTO_QLKS.LoaiPhong
+                {
+                    MaLoaiPhong = maloaip,
+                    TenLoaiPhong = txt_tenlp.Text,
+                    GiaTheoGio = double.Parse(txt_giagio.Text),
+                    GiaTheoNgay = double.Parse(giangay.Text),
+                };
+                bus_loaiphong.Update(loaip);
+                ChildClosed.Invoke(this, EventArgs.Empty);
+                var ThongBao1 = new DialogCustoms("Lưu thành công!", "Thông báo", DialogCustoms.OK);
+                ThongBao1.ShowDialog();
+            }
+        
         }
         public void loadata()
         {
@@ -57,8 +63,14 @@ namespace DuAn_QuanLiKhachSan.PageChild
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            loadata();
         }
+
+
+
+
+
+
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
@@ -69,6 +81,39 @@ namespace DuAn_QuanLiKhachSan.PageChild
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+
+        private void txt_giagio_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            TextBox textBox = sender as TextBox;
+
+            // Loại bỏ mọi ký tự không phải số
+            string input = textBox.Text;
+            string pattern = "[^0-9]"; // Chỉ lấy các ký tự không phải số
+            string replacement = "";
+            string result = Regex.Replace(input, pattern, replacement);
+
+            // Cập nhật nội dung của TextBox
+            textBox.Text = result;
+            // Di chuyển con trỏ đến cuối chuỗi
+            textBox.CaretIndex = textBox.Text.Length;
+        }
+
+        private void giangay_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            // Loại bỏ mọi ký tự không phải số
+            string input = textBox.Text;
+            string pattern = "[^0-9]"; // Chỉ lấy các ký tự không phải số
+            string replacement = "";
+            string result = Regex.Replace(input, pattern, replacement);
+
+            // Cập nhật nội dung của TextBox
+            textBox.Text = result;
+            // Di chuyển con trỏ đến cuối chuỗi
+            textBox.CaretIndex = textBox.Text.Length;
         }
     }
 }

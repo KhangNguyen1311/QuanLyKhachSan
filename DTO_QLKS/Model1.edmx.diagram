@@ -21,7 +21,6 @@
         <EntityTypeShape EntityType="QL_KhachSanModel.DichVuTheoPDP" Width="1.5" PointX="5.75" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QL_KhachSanModel.ListDichVu" Width="1.5" PointX="2.75" PointY="10.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QL_KhachSanModel.ListLoaiPhong" Width="1.5" PointX="7.75" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QL_KhachSanModel.ThongTinHoaDon" Width="1.5" PointX="9.75" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QL_KhachSanModel.ViewHoaDonNhanVienPhieuDatPhong" Width="1.5" PointX="11.75" PointY="2.5" IsExpanded="true" />
         <AssociationConnector Association="QL_KhachSanModel.FK__ChiTietDic__MaDV__4F7CD00D" ManuallyRouted="false" />
         <AssociationConnector Association="QL_KhachSanModel.FK__ChiTietDichVuPhi__4E88ABD4" ManuallyRouted="false" />
@@ -33,6 +32,8 @@
         <AssociationConnector Association="QL_KhachSanModel.FK__Phong__MaLoaiPho__5165187F" ManuallyRouted="false" />
         <AssociationConnector Association="QL_KhachSanModel.FK__TienNghiP__MaLoa__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="QL_KhachSanModel.FK__PhieuDatPh__MaNV__4AB81AF0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QL_KhachSanModel.DanhSachKhachHang" Width="1.5" PointX="12.375" PointY="5.75" />
+        <EntityTypeShape EntityType="QL_KhachSanModel.ThongTinHoaDon" Width="1.5" PointX="10.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

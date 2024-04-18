@@ -9,11 +9,11 @@ namespace DAL_QLKS
 {
     public class DAL_KhachHang
     {
-        public List<KhachHang> GetAll()
+        public List<DanhSachKhachHang> GetAll()
         {
             using (var conn = new QL_KhachSanEntities())
             {
-                var getall = conn.KhachHangs.ToList();
+                var getall = conn.DanhSachKhachHangs.ToList();
                 return getall;
             }
         }

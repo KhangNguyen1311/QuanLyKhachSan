@@ -31,7 +31,6 @@ namespace DuAn_QuanLiKhachSan.PageChild
         }
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            ChildClosed?.Invoke(this, EventArgs.Empty);
             Close();
 
         }
@@ -101,22 +100,32 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 {
                     MaLoaiPhong = loaiPhong.SelectedValue.ToString();
                 }
-                int Sotang = Convert.ToInt32(viTri.Text);
-                if (MaLoaiPhong != null && Sotang > 0)
+                int Sotang;
+                if (!string.IsNullOrEmpty(viTri.Text) && int.TryParse(viTri.Text, out Sotang) && Sotang > 0)
                 {
-                    bus_Phong.Insert(new DTO_QLKS.Phong
+                    if (!string.IsNullOrEmpty(MaLoaiPhong))
                     {
-                        MaLoaiPhong = MaLoaiPhong,
-                        Tang = Sotang
-                    });
+                        bus_Phong.Insert(new DTO_QLKS.Phong
+                        {
+                            MaLoaiPhong = MaLoaiPhong,
+                            Tang = Sotang
+                        });
 
-                    var ThongBao = new DialogCustoms("Thêm phòng thành công", "Thông báo", DialogCustoms.OK);
-                    ThongBao.ShowDialog();
-                    clear();
+                        var ThongBao = new DialogCustoms("Thêm phòng thành công", "Thông báo", DialogCustoms.OK);
+                        ThongBao.ShowDialog();
+                        ChildClosed?.Invoke(this, EventArgs.Empty);
+
+                        clear();
+                    }
+                    else
+                    {
+                        var ThongBao = new DialogCustoms("Vui lòng chọn loại phòng", "Lỗi", DialogCustoms.OK);
+                        ThongBao.ShowDialog();
+                    }
                 }
                 else
                 {
-                    var ThongBao = new DialogCustoms("Thêm phòng thất bại", "Lỗi", DialogCustoms.OK);
+                    var ThongBao = new DialogCustoms("Vui lòng chọn tầng", "Lỗi", DialogCustoms.OK);
                     ThongBao.ShowDialog();
                 }
             }
@@ -126,7 +135,6 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 ThongBao.ShowDialog();
             }
         }
-
         private void clearTxt_Click(object sender, RoutedEventArgs e)
         {
             clear();

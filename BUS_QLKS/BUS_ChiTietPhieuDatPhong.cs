@@ -44,5 +44,9 @@ namespace BUS_QLKS
                                  select cdv.TongGiaTri).Sum();
             return tongGiaTri;
         }
+        public void Delete(ChiTietPhieuDatPhong ctpdp)
+        {
+            dAL_ChiTietPhieuDatPhong.Delete(ctpdp);
+        }
     }
 }

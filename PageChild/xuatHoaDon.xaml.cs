@@ -31,32 +31,33 @@ namespace DuAn_QuanLiKhachSan.PageChild
         }
         public xuatHoaDon(string maPhong, string maPDP) : this()
         {
-            var chiTietPhong = bus_Phong.SelectAllPhong().Where(p => p.MaPhong == maPhong && p.MaPDP==maPDP).FirstOrDefault();
-            int SoNgay = (int)chiTietPhong.SoNgay;
-            int SoGio = (int)chiTietPhong.SoGio;
             MaPhong = maPhong;
             MaPDP = maPDP;
-
+            int songay = 0;
+            int sogio = 0;
             decimal giaTheoGio = 0;
             decimal giaTheoNgay = 0;
             List<ThongTinHoaDon> thongTinHD = bus_hoaDon.SelectChiTietHD().Where(c => c.MaPhong.Equals(MaPhong) && c.MaPDP.Equals(MaPDP)).ToList();
             foreach (ThongTinHoaDon item in thongTinHD)
             {
+                songay = (int)item.SoNgay;
+                sogio = (int)item.SoGio;
                 giaTheoGio = (decimal)item.GiaTheoGio;
                 giaTheoNgay = (decimal)item.GiaTheoNgay;
                 txbMaHoaDon.Text = item.MaHD;
                 txbSoNguoi.Text = item.SoNguoi.ToString();
                 txbTongTien.Text = item.TongGiaTri.ToString("N0") + " VNĐ";
                 txbSoPhong.Text = MaPhong;
-                if (SoGio >= 24)
+                txbNgayLapHD.Text = item.NgayInHD.ToString();
+                if (sogio >= 24)
                 {
                     txbSoNgayOrGio.Text = "Số ngày: ";
-                    txbSoNgay.Text = SoNgay.ToString();
+                    txbSoNgay.Text = songay.ToString();
                 }
                 else
                 {
                     txbSoNgayOrGio.Text = "Số giờ: ";
-                    txbSoNgay.Text = SoGio.ToString();
+                    txbSoNgay.Text = songay.ToString();
                 }
 
                 //truyền dữ liệu dịch vụ sử dụng vào lớp ObservableCollection
@@ -73,30 +74,30 @@ namespace DuAn_QuanLiKhachSan.PageChild
             //thêm dịch vụ thuê phòng
             decimal giaPhong;
             decimal tongTien;
-            if (SoGio >= 24)
+            
+            if ( sogio>= 24)
             {
                 // Nếu số ngày tồn tại, sử dụng số ngày và giá theo ngày
                 giaPhong = giaTheoNgay;
-                tongTien = giaTheoNgay * SoNgay;
+                tongTien = giaTheoNgay * songay;
             }
             else
             {
                 // Nếu số ngày không tồn tại, sử dụng số giờ và giá theo giờ
                 giaPhong = giaTheoGio;
-                tongTien = giaTheoGio * SoGio;
+                tongTien = giaTheoGio * sogio;
             }
 
             DanhsachDv dichvuThuePhong = new DanhsachDv
             {
                 tenDV = "Thuê phòng",
-                soLuong = SoGio >= 24 ? SoNgay.ToString() : SoGio.ToString(),
+                soLuong = sogio >= 24 ? songay.ToString() : sogio.ToString(),
                 giaTien = giaPhong.ToString(),
                 tongTien = tongTien.ToString(), // Tính tổng tiền dựa trên giá tiền và số lượng
             };
             // Thêm đối tượng vào danh sách
             dvItem.Add(dichvuThuePhong);
             lvDichVuDaSD.ItemsSource = dvItem;
-            txbNgayLapHD.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
         }
         private void btnClose_Click(object sender, RoutedEventArgs e)

@@ -48,13 +48,17 @@ namespace DuAn_QuanLiKhachSan.PageChild
             public string tinhtrang { get; set; }
             public int songuoi { get; set; }
         }
-
-        public phieuDatPhong()
+        static DTO_QLKS.NhanVien nhanVien = new DTO_QLKS.NhanVien();
+        public phieuDatPhong(DTO_QLKS.NhanVien nv)
         {
             InitializeComponent();
+            nhanVien = nv;
+
+
         }
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
+
             ChildClosed.Invoke(this, EventArgs.Empty);
             Close();
         }
@@ -91,16 +95,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 danhSachPhongTrong.Items.Refresh();
             }
         }
-        public void loadcombobox_nhanvien()
-        {
-            List<DTO_QLKS.NhanVien> nhanviens = bUS_NhanVien.SelectAll();
-            Debug.WriteLine(nhanviens.Count.ToString());
-            nhanvien_box.ItemsSource = nhanviens;
-            nhanvien_box.DisplayMemberPath = "TenNV";
-            nhanvien_box.SelectedValuePath = "MaNV";
-
-
-        }
+       
         public void loadcombobox_khachhang()
         {
             List<DTO_QLKS.KhachHang> khachHangs = bUS_khachhang.SelectAll();
@@ -111,7 +106,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            loadcombobox_nhanvien();
+            txt_nv.Text = nhanVien.TenNV;
             loadcombobox_khachhang();
         }
 
@@ -198,7 +193,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
         }
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (!ngaydat.SelectedDate.HasValue || !ngayketthuc.SelectedDate.HasValue || !giodat.SelectedTime.HasValue || !gioketthuc.SelectedTime.HasValue || khachhang_box.SelectedValue == null || nhanvien_box.SelectedValue == null)
+            if (!ngaydat.SelectedDate.HasValue || !ngayketthuc.SelectedDate.HasValue || !giodat.SelectedTime.HasValue || !gioketthuc.SelectedTime.HasValue || khachhang_box.SelectedValue == null)
             {
                 var thongba = new DialogCustoms("Vui lòng điền đủ thông tin", "Thông báo",DialogCustoms.OK);
                 thongba.ShowDialog();
@@ -210,10 +205,16 @@ namespace DuAn_QuanLiKhachSan.PageChild
             }
             else
             {
+
+                DTO_QLKS.NhanVien nv = bUS_NhanVien.SelectAll().Where(c=>c.TenNV.Equals(txt_nv.Text)).FirstOrDefault();
+
+
+
+
                 DTO_QLKS.PhieuDatPhong phieu = new DTO_QLKS.PhieuDatPhong
                 {
                     MaKH = khachhang_box.SelectedValue.ToString(),
-                    MaNV = nhanvien_box.SelectedValue.ToString(),
+                    MaNV = nv.MaNV,
                 };
                 bUS_PhieuDatPhong.Insert(phieu);
                 DTO_QLKS.PhieuDatPhong ph = bUS_PhieuDatPhong.SelectAll().LastOrDefault();

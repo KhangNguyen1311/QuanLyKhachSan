@@ -69,10 +69,16 @@ namespace DuAn_QuanLiKhachSan.Views
         private void btn_themPhong_Click(object sender, RoutedEventArgs e)
         {
             themPhong themPhong = new themPhong();
+            themPhong.ChildClosed += ChildWindowClosed;
+
             themPhong.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             themPhong.Show();
         }
-
+        private void ChildWindowClosed(object sender, EventArgs e)
+        {
+            // Handle child window closed event here
+            dataPhong();
+        }
 
         private void dataPhong()
         {
@@ -127,7 +133,7 @@ namespace DuAn_QuanLiKhachSan.Views
             if (String.IsNullOrEmpty(txt_searchRoom.Text))
                 return true;
             else
-                return (obj as DanhSachThongTinPhong).MaPhong.Contains(txt_searchRoom.Text);
+                return (obj as DanhSachThongTinPhong).MaPhong.ToLower().Contains(txt_searchRoom.Text.ToLower());
         }
 
 

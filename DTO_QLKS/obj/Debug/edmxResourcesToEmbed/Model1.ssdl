@@ -123,6 +123,27 @@
     <Property Name="SL" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
+warning 6002: The table/view 'QL_KhachSan.dbo.DanhSachKhachHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DanhSachKhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+      <PropertyRef Name="TenKH" />
+      <PropertyRef Name="NgaySinh" />
+      <PropertyRef Name="DiaChi" />
+      <PropertyRef Name="SDT" />
+      <PropertyRef Name="MaCMT" />
+      <PropertyRef Name="QuocTich" />
+    </Key>
+    <Property Name="MaKH" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgaySinh" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="3" />
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="MaCMT" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="QuocTich" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
 warning 6002: The table/view 'QL_KhachSan.dbo.DanhSachNhanVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="DanhSachNhanVien">
     <Key>
@@ -230,7 +251,14 @@ warning 6002: The table/view 'QL_KhachSan.dbo.ThongTinHoaDon' does not have a pr
       <PropertyRef Name="MaLoaiPhong" />
       <PropertyRef Name="GiaTheoGio" />
       <PropertyRef Name="GiaTheoNgay" />
+      <PropertyRef Name="TenDV" />
+      <PropertyRef Name="MaDV" />
+      <PropertyRef Name="SoLuongDV" />
+      <PropertyRef Name="GiaTien" />
+      <PropertyRef Name="ThanhTien" />
       <PropertyRef Name="SoNguoi" />
+      <PropertyRef Name="NgayDat" />
+      <PropertyRef Name="NgayKetThuc" />
     </Key>
     <Property Name="MaHD" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="TongGiaTri" Type="float" Nullable="false" />
@@ -240,12 +268,16 @@ warning 6002: The table/view 'QL_KhachSan.dbo.ThongTinHoaDon' does not have a pr
     <Property Name="MaLoaiPhong" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="GiaTheoGio" Type="float" Nullable="false" />
     <Property Name="GiaTheoNgay" Type="float" Nullable="false" />
-    <Property Name="TenDV" Type="nvarchar" MaxLength="50" />
-    <Property Name="MaDV" Type="char" MaxLength="10" />
-    <Property Name="SoLuongDV" Type="int" />
-    <Property Name="GiaTien" Type="float" />
-    <Property Name="ThanhTien" Type="float" />
+    <Property Name="TenDV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaDV" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuongDV" Type="int" Nullable="false" />
+    <Property Name="GiaTien" Type="float" Nullable="false" />
+    <Property Name="ThanhTien" Type="float" Nullable="false" />
     <Property Name="SoNguoi" Type="int" Nullable="false" />
+    <Property Name="NgayDat" Type="date" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="date" Nullable="false" />
+    <Property Name="SoNgay" Type="int" />
+    <Property Name="SoGio" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'QL_KhachSan.dbo.ViewHoaDonNhanVienPhieuDatPhong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -498,6 +530,18 @@ warning 6002: The table/view 'QL_KhachSan.dbo.ViewHoaDonNhanVienPhieuDatPhong' d
     <EntitySet Name="PhieuDatPhong" EntityType="Self.PhieuDatPhong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TienNghiPhong" EntityType="Self.TienNghiPhong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhSachKhachHang" EntityType="Self.DanhSachKhachHang" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DanhSachKhachHang].[MaKH] AS [MaKH], 
+[DanhSachKhachHang].[TenKH] AS [TenKH], 
+[DanhSachKhachHang].[NgaySinh] AS [NgaySinh], 
+[DanhSachKhachHang].[GioiTinh] AS [GioiTinh], 
+[DanhSachKhachHang].[DiaChi] AS [DiaChi], 
+[DanhSachKhachHang].[SDT] AS [SDT], 
+[DanhSachKhachHang].[MaCMT] AS [MaCMT], 
+[DanhSachKhachHang].[QuocTich] AS [QuocTich]
+FROM [dbo].[DanhSachKhachHang] AS [DanhSachKhachHang]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="DanhSachNhanVien" EntityType="Self.DanhSachNhanVien" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [DanhSachNhanVien].[MaNV] AS [MaNV], 
@@ -572,7 +616,11 @@ FROM [dbo].[ListLoaiPhong] AS [ListLoaiPhong]</DefiningQuery>
 [ThongTinHoaDon].[SoLuongDV] AS [SoLuongDV], 
 [ThongTinHoaDon].[GiaTien] AS [GiaTien], 
 [ThongTinHoaDon].[ThanhTien] AS [ThanhTien], 
-[ThongTinHoaDon].[SoNguoi] AS [SoNguoi]
+[ThongTinHoaDon].[SoNguoi] AS [SoNguoi], 
+[ThongTinHoaDon].[NgayDat] AS [NgayDat], 
+[ThongTinHoaDon].[NgayKetThuc] AS [NgayKetThuc], 
+[ThongTinHoaDon].[SoNgay] AS [SoNgay], 
+[ThongTinHoaDon].[SoGio] AS [SoGio]
 FROM [dbo].[ThongTinHoaDon] AS [ThongTinHoaDon]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="ViewHoaDonNhanVienPhieuDatPhong" EntityType="Self.ViewHoaDonNhanVienPhieuDatPhong" store:Type="Views" store:Schema="dbo">

@@ -157,7 +157,7 @@ namespace DuAn_QuanLiKhachSan.Views
         {
 
             var timkiem = txt_searchRoom.Text.ToLower();
-            List<DTO_QLKS.DichVu> result = bUS_DichVu.TimKiem().Where(c => c.TenDV.ToLower().Contains(timkiem)).ToList();
+            List<DTO_QLKS.ListDichVu> result = bUS_DichVu.SelectDichVu().Where(c => c.TenDV.ToLower().Contains(timkiem)).ToList();
             dataGridDV.ItemsSource = result;
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)

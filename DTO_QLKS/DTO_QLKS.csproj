@@ -55,6 +55,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="DanhSachKhachHang.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachNhanVien.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

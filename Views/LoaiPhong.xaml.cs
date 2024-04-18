@@ -115,5 +115,12 @@ namespace DuAn_QuanLiKhachSan.Views
                 }
             }
         }
+
+        private void txt_searchRoom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string mlp = txt_searchRoom.Text.ToLower();
+            List<DTO_QLKS.LoaiPhong> loaiPhongs = BUS_LoaiPhong.SelectAll().Where(c=>c.MaLoaiPhong.ToLower().Contains(mlp)).ToList();
+            DatagridLoaiPhong.ItemsSource = loaiPhongs;
+        }
     }
 }

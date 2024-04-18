@@ -1,5 +1,6 @@
 ﻿using BUS_QLKS;
 using DTO_QLKS;
+using DuAn_QuanLiKhachSan.Views;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -73,8 +74,8 @@ namespace DuAn_QuanLiKhachSan.PageChild
         public void loaddata()
         {
             PhieuDatPhong ph = bUS_PhieuDatPhong.SelectAll().Where(c=>c.MaPDP==mpdp).FirstOrDefault();
-            NhanVien nv = bUS_NhanVien.SelectAll().Where(c=>c.MaNV == ph.MaNV).FirstOrDefault();
-            KhachHang kh = bUS_KhachHang.SelectAll().Where(c=>c.MaKH == ph.MaKH).FirstOrDefault();
+            DTO_QLKS.NhanVien nv = bUS_NhanVien.SelectAll().Where(c=>c.MaNV == ph.MaNV).FirstOrDefault();
+            DTO_QLKS.KhachHang kh = bUS_KhachHang.SelectAll().Where(c=>c.MaKH == ph.MaKH).FirstOrDefault();
             txt_nhanvien.Text = nv.TenNV;
             txt_khachhang.Text = kh.TenKH;
 
@@ -127,6 +128,38 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 EditPhieudatphong editPhieudatphong = new EditPhieudatphong(mpdp, mp);
                 editPhieudatphong.ChildClosed += ChildWindowClosed;
                 editPhieudatphong.Show();
+
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            int index = danhSachPhongTrong.SelectedIndex;
+            var row = (DataGridRow)danhSachPhongTrong.ItemContainerGenerator.ContainerFromIndex(index);
+            if (row != null)
+            {
+
+                string mpdp = "";
+                string mp = "";
+
+                var cell = danhSachPhongTrong.Columns[0].GetCellContent(row) as TextBlock;
+
+                if (cell != null)
+                {
+                    mpdp = cell.Text;
+
+                }
+                cell = danhSachPhongTrong.Columns[1].GetCellContent(row) as TextBlock;
+
+                if (cell != null)
+                {
+                    mp = cell.Text;
+
+                }
+                ChiTietPhieuDatPhong ctpdp = bUS_ChiTietphieudatphong.SelectAll().Where(c=>c.MaPDP.Equals(mpdp)&&c.MaPhong.Equals(mp)).FirstOrDefault();
+                bUS_ChiTietphieudatphong.Delete(ctpdp);
+                var tb = new DialogCustoms("Xoá thành công!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
 
             }
         }

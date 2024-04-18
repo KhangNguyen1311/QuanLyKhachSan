@@ -66,7 +66,9 @@
                                         <Button Style="{StaticResource gridEditButton}" Margin="0 0 10 0" Click="Button_Click" >
                                             <fa:IconImage Icon="Pencil" Style="{StaticResource gridBtnIcon}"/>
                                         </Button>
-
+                                        <Button Style="{StaticResource gridEditButton}" Margin="0 0 10 0" Click="Button_Click_1">
+                                            <fa:IconImage Icon="Trash" Style="{StaticResource gridBtnIcon}"/>
+                                        </Button>
 
                                     </StackPanel>
                                 </DataTemplate>

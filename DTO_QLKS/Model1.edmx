@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QL_KhachSanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QL_KhachSanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChiTietDichVuPhieuDatPhong">
           <Key>
             <PropertyRef Name="MaPDP" />
@@ -128,6 +128,27 @@
           <Property Name="SL" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'QL_KhachSan.dbo.DanhSachKhachHang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DanhSachKhachHang">
+          <Key>
+            <PropertyRef Name="MaKH" />
+            <PropertyRef Name="TenKH" />
+            <PropertyRef Name="NgaySinh" />
+            <PropertyRef Name="DiaChi" />
+            <PropertyRef Name="SDT" />
+            <PropertyRef Name="MaCMT" />
+            <PropertyRef Name="QuocTich" />
+          </Key>
+          <Property Name="MaKH" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TenKH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NgaySinh" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="3" />
+          <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SDT" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="MaCMT" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="QuocTich" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'QL_KhachSan.dbo.DanhSachNhanVien' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DanhSachNhanVien">
           <Key>
@@ -235,7 +256,14 @@ warning 6002: The table/view 'QL_KhachSan.dbo.ThongTinHoaDon' does not have a pr
             <PropertyRef Name="MaLoaiPhong" />
             <PropertyRef Name="GiaTheoGio" />
             <PropertyRef Name="GiaTheoNgay" />
+            <PropertyRef Name="TenDV" />
+            <PropertyRef Name="MaDV" />
+            <PropertyRef Name="SoLuongDV" />
+            <PropertyRef Name="GiaTien" />
+            <PropertyRef Name="ThanhTien" />
             <PropertyRef Name="SoNguoi" />
+            <PropertyRef Name="NgayDat" />
+            <PropertyRef Name="NgayKetThuc" />
           </Key>
           <Property Name="MaHD" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="TongGiaTri" Type="float" Nullable="false" />
@@ -245,12 +273,16 @@ warning 6002: The table/view 'QL_KhachSan.dbo.ThongTinHoaDon' does not have a pr
           <Property Name="MaLoaiPhong" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="GiaTheoGio" Type="float" Nullable="false" />
           <Property Name="GiaTheoNgay" Type="float" Nullable="false" />
-          <Property Name="TenDV" Type="nvarchar" MaxLength="50" />
-          <Property Name="MaDV" Type="char" MaxLength="10" />
-          <Property Name="SoLuongDV" Type="int" />
-          <Property Name="GiaTien" Type="float" />
-          <Property Name="ThanhTien" Type="float" />
+          <Property Name="TenDV" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaDV" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="SoLuongDV" Type="int" Nullable="false" />
+          <Property Name="GiaTien" Type="float" Nullable="false" />
+          <Property Name="ThanhTien" Type="float" Nullable="false" />
           <Property Name="SoNguoi" Type="int" Nullable="false" />
+          <Property Name="NgayDat" Type="date" Nullable="false" />
+          <Property Name="NgayKetThuc" Type="date" Nullable="false" />
+          <Property Name="SoNgay" Type="int" />
+          <Property Name="SoGio" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'QL_KhachSan.dbo.ViewHoaDonNhanVienPhieuDatPhong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -503,6 +535,18 @@ warning 6002: The table/view 'QL_KhachSan.dbo.ViewHoaDonNhanVienPhieuDatPhong' d
           <EntitySet Name="PhieuDatPhong" EntityType="Self.PhieuDatPhong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TienNghiPhong" EntityType="Self.TienNghiPhong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DanhSachKhachHang" EntityType="Self.DanhSachKhachHang" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[DanhSachKhachHang].[MaKH] AS [MaKH], 
+[DanhSachKhachHang].[TenKH] AS [TenKH], 
+[DanhSachKhachHang].[NgaySinh] AS [NgaySinh], 
+[DanhSachKhachHang].[GioiTinh] AS [GioiTinh], 
+[DanhSachKhachHang].[DiaChi] AS [DiaChi], 
+[DanhSachKhachHang].[SDT] AS [SDT], 
+[DanhSachKhachHang].[MaCMT] AS [MaCMT], 
+[DanhSachKhachHang].[QuocTich] AS [QuocTich]
+FROM [dbo].[DanhSachKhachHang] AS [DanhSachKhachHang]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="DanhSachNhanVien" EntityType="Self.DanhSachNhanVien" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [DanhSachNhanVien].[MaNV] AS [MaNV], 
@@ -577,7 +621,11 @@ FROM [dbo].[ListLoaiPhong] AS [ListLoaiPhong]</DefiningQuery>
 [ThongTinHoaDon].[SoLuongDV] AS [SoLuongDV], 
 [ThongTinHoaDon].[GiaTien] AS [GiaTien], 
 [ThongTinHoaDon].[ThanhTien] AS [ThanhTien], 
-[ThongTinHoaDon].[SoNguoi] AS [SoNguoi]
+[ThongTinHoaDon].[SoNguoi] AS [SoNguoi], 
+[ThongTinHoaDon].[NgayDat] AS [NgayDat], 
+[ThongTinHoaDon].[NgayKetThuc] AS [NgayKetThuc], 
+[ThongTinHoaDon].[SoNgay] AS [SoNgay], 
+[ThongTinHoaDon].[SoGio] AS [SoGio]
 FROM [dbo].[ThongTinHoaDon] AS [ThongTinHoaDon]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ViewHoaDonNhanVienPhieuDatPhong" EntityType="Self.ViewHoaDonNhanVienPhieuDatPhong" store:Type="Views" store:Schema="dbo">
@@ -629,8 +677,7 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
             <End Role="TienNghiPhong" EntitySet="TienNghiPhong" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QL_KhachSanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -880,33 +927,6 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
           <Property Name="GiaTheoGio" Type="Double" Nullable="false" />
           <Property Name="GiaTheoNgay" Type="Double" Nullable="false" />
         </EntityType>
-        <EntityType Name="ThongTinHoaDon">
-          <Key>
-            <PropertyRef Name="MaHD" />
-            <PropertyRef Name="TongGiaTri" />
-            <PropertyRef Name="NgayInHD" />
-            <PropertyRef Name="MaPDP" />
-            <PropertyRef Name="MaPhong" />
-            <PropertyRef Name="MaLoaiPhong" />
-            <PropertyRef Name="GiaTheoGio" />
-            <PropertyRef Name="GiaTheoNgay" />
-            <PropertyRef Name="SoNguoi" />
-          </Key>
-          <Property Name="MaHD" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="TongGiaTri" Type="Double" Nullable="false" />
-          <Property Name="NgayInHD" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="MaPDP" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaPhong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaLoaiPhong" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="GiaTheoGio" Type="Double" Nullable="false" />
-          <Property Name="GiaTheoNgay" Type="Double" Nullable="false" />
-          <Property Name="TenDV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaDV" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <Property Name="SoLuongDV" Type="Int32" />
-          <Property Name="GiaTien" Type="Double" />
-          <Property Name="ThanhTien" Type="Double" />
-          <Property Name="SoNguoi" Type="Int32" Nullable="false" />
-        </EntityType>
         <EntityType Name="ViewHoaDonNhanVienPhieuDatPhong">
           <Key>
             <PropertyRef Name="MaHD" />
@@ -1060,7 +1080,6 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
           <EntitySet Name="DichVuTheoPDPs" EntityType="Self.DichVuTheoPDP" />
           <EntitySet Name="ListDichVus" EntityType="Self.ListDichVu" />
           <EntitySet Name="ListLoaiPhongs" EntityType="Self.ListLoaiPhong" />
-          <EntitySet Name="ThongTinHoaDons" EntityType="Self.ThongTinHoaDon" />
           <EntitySet Name="ViewHoaDonNhanVienPhieuDatPhongs" EntityType="Self.ViewHoaDonNhanVienPhieuDatPhong" />
           <AssociationSet Name="FK__ChiTietDic__MaDV__4F7CD00D" Association="Self.FK__ChiTietDic__MaDV__4F7CD00D">
             <End Role="DichVu" EntitySet="DichVus" />
@@ -1103,7 +1122,7 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
           </AssociationSet>
           <FunctionImport Name="GetPhongInfoByDate" IsComposable="true" ReturnType="Collection(QL_KhachSanModel.GetPhongInfoByDate_Result)">
-            <Parameter Name="selectedDate" Mode="In" Type="DateTime" />
+          <Parameter Name="selectedDate" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="InsertChiTietDVPhieuDatPhong">
             <Parameter Name="MaPDP" Mode="In" Type="String" />
@@ -1140,7 +1159,7 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
             <Parameter Name="QuocTich" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertLoaiDichVu">
-            <Parameter Name="TenLoaiDichVu" Mode="In" Type="String" />
+          <Parameter Name="TenLoaiDichVu" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="InsertLoaiPhong">
             <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
@@ -1181,7 +1200,66 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
             <Parameter Name="SoNguoi" Mode="In" Type="Int32" />
             <Parameter Name="TinhTrang" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="DanhSachKhachHangs" EntityType="QL_KhachSanModel.DanhSachKhachHang" />
+          <EntitySet Name="ThongTinHoaDons" EntityType="QL_KhachSanModel.ThongTinHoaDon" />
         </EntityContainer>
+        <EntityType Name="DanhSachKhachHang">
+          <Key>
+            <PropertyRef Name="MaKH" />
+            <PropertyRef Name="TenKH" />
+            <PropertyRef Name="NgaySinh" />
+            <PropertyRef Name="DiaChi" />
+            <PropertyRef Name="SDT" />
+            <PropertyRef Name="MaCMT" />
+            <PropertyRef Name="QuocTich" />
+          </Key>
+          <Property Name="MaKH" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TenKH" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="MaCMT" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="QuocTich" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ThongTinHoaDon">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="TongGiaTri" />
+            <PropertyRef Name="NgayInHD" />
+            <PropertyRef Name="MaPDP" />
+            <PropertyRef Name="MaPhong" />
+            <PropertyRef Name="MaLoaiPhong" />
+            <PropertyRef Name="GiaTheoGio" />
+            <PropertyRef Name="GiaTheoNgay" />
+            <PropertyRef Name="TenDV" />
+            <PropertyRef Name="MaDV" />
+            <PropertyRef Name="SoLuongDV" />
+            <PropertyRef Name="GiaTien" />
+            <PropertyRef Name="ThanhTien" />
+            <PropertyRef Name="SoNguoi" />
+            <PropertyRef Name="NgayDat" />
+            <PropertyRef Name="NgayKetThuc" />
+          </Key>
+          <Property Name="MaHD" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TongGiaTri" Type="Double" Nullable="false" />
+          <Property Name="NgayInHD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MaPDP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MaPhong" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MaLoaiPhong" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="GiaTheoGio" Type="Double" Nullable="false" />
+          <Property Name="GiaTheoNgay" Type="Double" Nullable="false" />
+          <Property Name="TenDV" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaDV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="SoLuongDV" Type="Int32" Nullable="false" />
+          <Property Name="GiaTien" Type="Double" Nullable="false" />
+          <Property Name="ThanhTien" Type="Double" Nullable="false" />
+          <Property Name="SoNguoi" Type="Int32" Nullable="false" />
+          <Property Name="NgayDat" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SoNgay" Type="Int32" />
+          <Property Name="SoGio" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1386,26 +1464,6 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ThongTinHoaDons">
-            <EntityTypeMapping TypeName="QL_KhachSanModel.ThongTinHoaDon">
-              <MappingFragment StoreEntitySet="ThongTinHoaDon">
-                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
-                <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
-                <ScalarProperty Name="NgayInHD" ColumnName="NgayInHD" />
-                <ScalarProperty Name="MaPDP" ColumnName="MaPDP" />
-                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
-                <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
-                <ScalarProperty Name="GiaTheoGio" ColumnName="GiaTheoGio" />
-                <ScalarProperty Name="GiaTheoNgay" ColumnName="GiaTheoNgay" />
-                <ScalarProperty Name="TenDV" ColumnName="TenDV" />
-                <ScalarProperty Name="MaDV" ColumnName="MaDV" />
-                <ScalarProperty Name="SoLuongDV" ColumnName="SoLuongDV" />
-                <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
-                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-                <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ViewHoaDonNhanVienPhieuDatPhongs">
             <EntityTypeMapping TypeName="QL_KhachSanModel.ViewHoaDonNhanVienPhieuDatPhong">
               <MappingFragment StoreEntitySet="ViewHoaDonNhanVienPhieuDatPhong">
@@ -1450,6 +1508,44 @@ FROM [dbo].[ViewHoaDonNhanVienPhieuDatPhong] AS [ViewHoaDonNhanVienPhieuDatPhong
           <FunctionImportMapping FunctionImportName="InsertPhong" FunctionName="QL_KhachSanModel.Store.InsertPhong" />
           <FunctionImportMapping FunctionImportName="InsertTienNghiPhong" FunctionName="QL_KhachSanModel.Store.InsertTienNghiPhong" />
           <FunctionImportMapping FunctionImportName="UpdatePhieuDatPhong" FunctionName="QL_KhachSanModel.Store.UpdatePhieuDatPhong" />
+          <EntitySetMapping Name="DanhSachKhachHangs">
+            <EntityTypeMapping TypeName="QL_KhachSanModel.DanhSachKhachHang">
+              <MappingFragment StoreEntitySet="DanhSachKhachHang">
+                <ScalarProperty Name="QuocTich" ColumnName="QuocTich" />
+                <ScalarProperty Name="MaCMT" ColumnName="MaCMT" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThongTinHoaDons">
+            <EntityTypeMapping TypeName="QL_KhachSanModel.ThongTinHoaDon">
+              <MappingFragment StoreEntitySet="ThongTinHoaDon">
+                <ScalarProperty Name="SoGio" ColumnName="SoGio" />
+                <ScalarProperty Name="SoNgay" ColumnName="SoNgay" />
+                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+                <ScalarProperty Name="NgayDat" ColumnName="NgayDat" />
+                <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+                <ScalarProperty Name="SoLuongDV" ColumnName="SoLuongDV" />
+                <ScalarProperty Name="MaDV" ColumnName="MaDV" />
+                <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+                <ScalarProperty Name="GiaTheoNgay" ColumnName="GiaTheoNgay" />
+                <ScalarProperty Name="GiaTheoGio" ColumnName="GiaTheoGio" />
+                <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
+                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+                <ScalarProperty Name="MaPDP" ColumnName="MaPDP" />
+                <ScalarProperty Name="NgayInHD" ColumnName="NgayInHD" />
+                <ScalarProperty Name="TongGiaTri" ColumnName="TongGiaTri" />
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -68,7 +68,7 @@ namespace DuAn_QuanLiKhachSan.Views
 
                 if (cell != null)
                 {
-                    khach = bUS_KhachHang.GetAll().Where(c => c.MaKH == cell.Text).FirstOrDefault();
+                    khach = bUS_KhachHang.SelectAll().Where(c => c.MaKH == cell.Text).FirstOrDefault();
                 }
 
                 cell = dataGrid.Columns[1].GetCellContent(row) as TextBlock;
@@ -155,7 +155,7 @@ namespace DuAn_QuanLiKhachSan.Views
         private void txt_searchBill_TextChanged(object sender, TextChangedEventArgs e)
         {
             var timkiem = txt_searchBill.Text.ToLower();
-            List<DTO_QLKS.KhachHang> result = bUS_KhachHang.GetAll().Where(c => c.TenKH.ToLower().Contains(timkiem)).ToList();
+            List<DTO_QLKS.DanhSachKhachHang> result = bUS_KhachHang.GetAll().Where(c => c.TenKH.ToLower().Contains(timkiem)).ToList();
             dataGrid.ItemsSource = result;
         }
 

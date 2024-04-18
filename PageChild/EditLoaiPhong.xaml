@@ -38,11 +38,11 @@
                 <StackPanel Orientation="Vertical" Grid.Column="1">
                     <StackPanel Orientation="Vertical" Margin="20 0">
                         <Label Content="GIÁ THEO GIỜ" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                        <TextBox x:Name="txt_giagio" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="140" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="txt_giagio" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="140" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" TextChanged="txt_giagio_TextChanged"/>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
                         <Label Content="GIÁ  THEO NGÀY" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
-                        <TextBox x:Name="giangay" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="140" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox x:Name="giangay" Style="{DynamicResource TextBoxStyle}"  HorizontalAlignment="Left" Width="140" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" TextChanged="giangay_TextChanged"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>

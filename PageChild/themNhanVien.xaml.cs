@@ -37,7 +37,6 @@ namespace DuAn_QuanLiKhachSan.PageChild
         public themNhanVien()
         {
             InitializeComponent();
-            LoadData();
         }
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
@@ -48,9 +47,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
 
 
-        public void LoadData()
-        {
-        }
+ 
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
@@ -77,7 +74,7 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
         public void SaveImage()
         {
-            string destinationFolder = @"C:\Quanlikhachsan";
+            string destinationFolder = @"D:\Code\C#\DuAn_QuanLiKhachSan\AnhNV";
             string destinationFilePath = System.IO.Path.Combine(destinationFolder, imagename);
             if (File.Exists(destinationFilePath) == false)
             {
@@ -145,14 +142,18 @@ namespace DuAn_QuanLiKhachSan.PageChild
                     // Gọi hàm LoadData để cập nhật dữ liệu hiển thị (giả sử bạn đã có hàm LoadData)
 
 
-                    LoadData();
 
                     SaveImage();
                 }
                 catch (Exception ex)
                 {
+
+
+                    System.Windows.MessageBox.Show(ex.Message);
+
+/*
                     var tb = new DialogCustoms("Mời bạn nhập lại!", "Thông báo!", DialogCustoms.OK);
-                    tb.ShowDialog();
+                    tb.ShowDialog();*/
                 }
             }
 

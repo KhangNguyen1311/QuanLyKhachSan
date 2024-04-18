@@ -12,7 +12,7 @@ namespace BUS_QLKS
     {
         static DAL_KhachHang dAL_KhachHang = new DAL_KhachHang();
 
-        public List<KhachHang> GetAll()
+        public List<DanhSachKhachHang> GetAll()
         {
             return dAL_KhachHang.GetAll();
         }

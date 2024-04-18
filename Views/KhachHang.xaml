@@ -46,7 +46,7 @@
 
                     <DataGridTextColumn Header="SỐ ĐIỆN THOẠI" Width="*" Binding="{Binding SDT, UpdateSourceTrigger=LostFocus}" />
                     <DataGridTextColumn Header="ĐỊA CHỈ" Width="*" Binding="{Binding DiaChi, UpdateSourceTrigger=LostFocus}" />
-                    <DataGridTextColumn Header="GIỚI TÍNH" Width="*" Binding="{Binding GIOITINH, UpdateSourceTrigger=LostFocus}" />
+                    <DataGridTextColumn Header="GIỚI TÍNH" Width="*" Binding="{Binding GioiTinh, UpdateSourceTrigger=LostFocus}" />
                     <DataGridTextColumn Header="QUỐC TỊCH" Width="*" Binding="{Binding QuocTich, UpdateSourceTrigger=LostFocus}"/>
                     <DataGridTemplateColumn Header="TÙY CHỈNH" IsReadOnly="True" Width="auto">
                         <DataGridTemplateColumn.CellTemplate>

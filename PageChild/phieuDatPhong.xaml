@@ -42,7 +42,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Mã khách hàng" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
+                            <Label Content="Tên khách hàng" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
                         <ComboBox  x:Name="khachhang_box" Style="{DynamicResource ComboBoxFlatStyle}" Height="34" HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}" />
@@ -50,10 +50,10 @@
 
                     <StackPanel Orientation="Vertical" Margin="20 0">
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Mã nhân viên" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
+                            <Label Content="Tên nhân viên" FontWeight="Bold" Foreground="{DynamicResource PrimaryTextColor}"/>
                             <fa:IconImage Icon="User" Style="{DynamicResource Icon}"/>
                         </StackPanel>
-                        <ComboBox x:Name="nhanvien_box" Style="{DynamicResource ComboBoxFlatStyle}" Height="34"  HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBox IsReadOnly="True" x:Name="txt_nv" Style="{DynamicResource TextBoxStyle}" Height="34"  HorizontalAlignment="Left" Width="300" FontSize="15" Foreground="{DynamicResource PrimaryTextColor}"/>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20 0">
                         <StackPanel Orientation="Horizontal"/>

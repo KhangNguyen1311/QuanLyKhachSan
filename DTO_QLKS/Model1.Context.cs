@@ -44,8 +44,9 @@ namespace DTO_QLKS
         public DbSet<DichVuTheoPDP> DichVuTheoPDPs { get; set; }
         public DbSet<ListDichVu> ListDichVus { get; set; }
         public DbSet<ListLoaiPhong> ListLoaiPhongs { get; set; }
-        public DbSet<ThongTinHoaDon> ThongTinHoaDons { get; set; }
         public DbSet<ViewHoaDonNhanVienPhieuDatPhong> ViewHoaDonNhanVienPhieuDatPhongs { get; set; }
+        public DbSet<DanhSachKhachHang> DanhSachKhachHangs { get; set; }
+        public DbSet<ThongTinHoaDon> ThongTinHoaDons { get; set; }
     
         [EdmFunction("QL_KhachSanEntities", "GetPhongInfoByDate")]
         public virtual IQueryable<GetPhongInfoByDate_Result> GetPhongInfoByDate(Nullable<System.DateTime> selectedDate)

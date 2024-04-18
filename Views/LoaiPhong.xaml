@@ -19,7 +19,7 @@
             <ColumnDefinition Width="41*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
-            <TextBox x:Name="txt_searchRoom" Tag="Tìm loại phòng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" />
+            <TextBox  x:Name="txt_searchRoom" Tag="Tìm loại phòng" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Width="300" FontSize="15" TextChanged="txt_searchRoom_TextChanged" />
             <fa:IconImage Icon="Search" Style="{DynamicResource Icon}" Height="26" Width="26" Margin="-40 0 0 0"/>
         </StackPanel>
         <Button x:Name="btn_themLoaiPhong" Content="THÊM LOẠI PHÒNG" Grid.Column="4" Width="200" Style="{DynamicResource MainBtn}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Click="btn_themLoaiPhong_Click" Margin="5,0,0,0"/>
