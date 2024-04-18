@@ -205,13 +205,14 @@ namespace DuAn_QuanLiKhachSan.PageChild
             if (errorCCCD.Text.Length != 0 || errorEmail.Text.Length != 0 || errorSDT.Text.Length != 0 || errorTenv.Text.Length != 0)
 
             {
-                // Hiển thị thông báo lỗi
-                System.Windows.MessageBox.Show("Vui lòng kiểm tra lại thông tin!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Hiển thị thông báo 
+                var tb = new DialogCustoms("Vui lòng kiểm tra lại thông tin!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
             }
             else if (txt_TenNV.Text.Length == 0 || txt_SDT.Text.Length == 0 || txt_DiaChi.Text.Length == 0 || txt_Email.Text.Length == 0 || txt_ChuVu.Text.Length == 0 || txt_NgaySinh.Text.Length == 0 || txt_CCCD.Text.Length == 0)
             {
-                System.Windows.MessageBox.Show("Vui lòng nhập đầy đủ thông tin!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
-
+                var tb = new DialogCustoms("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
             }
 
 
@@ -226,8 +227,8 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 NhanVien.CCCD = txt_CCCD.Text;
                 string Phai = phai;
                 bUS_NhanVien.Update(NhanVien);
-                System.Windows.MessageBox.Show("Cập nhập thành công");
-
+                var tb = new DialogCustoms("Cập nhập thành công!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
 
                 load();
             }
@@ -255,7 +256,8 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
             if (nhanhvien.VaiTro == "Quản lý")
             {
-                System.Windows.MessageBox.Show("Không thể vô hiệu hoá quản lý");
+                var tb = new DialogCustoms("Không thể vô hiệu hoá quản lý!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
             }
             else
             {
@@ -263,14 +265,16 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 {
                     nhanhvien.TinhTrang = "Không hoạt động";
                     bUS_NhanVien.Update(nhanhvien);
-                    System.Windows.MessageBox.Show("Vô hiệu hoá thành công");
+                    var tb = new DialogCustoms("Vô hiệu hoá thành công!", "Thông báo!", DialogCustoms.OK);
+                    tb.ShowDialog();
 
                 }
                 else if (nhanhvien.TinhTrang == "Không hoạt động")
                 {
                     nhanhvien.TinhTrang = "Hoạt động";
                     bUS_NhanVien.Update(nhanhvien);
-                    System.Windows.MessageBox.Show("Kích hoạt thành công");
+                    var tb = new DialogCustoms("Kích hoạt thành công!", "Thông báo!", DialogCustoms.OK);
+                    tb.ShowDialog();
 
                 }
             }

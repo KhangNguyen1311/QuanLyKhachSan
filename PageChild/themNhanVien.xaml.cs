@@ -17,6 +17,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using BUS_QLKS;
 using DAL_QLKS;
+using DuAn_QuanLiKhachSan.Views;
 
 namespace DuAn_QuanLiKhachSan.PageChild
 {
@@ -97,12 +98,13 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
             {
                 // Hiển thị thông báo lỗi
-                System.Windows.MessageBox.Show("Vui lòng kiểm tra lại thông tin!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                var tb = new DialogCustoms("Vui lòng kiểm tra lại thông tin!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
             }
             else if (txt_TenNV.Text.Length == 0 || txt_SDT.Text.Length == 0 || txt_DiaChi.Text.Length == 0 || txt_Email.Text.Length == 0 || txt_ChucVu.Text.Length == 0 || txt_MatKhau.Text.Length == 0 || txt_NgaySinh.Text.Length == 0 || txt_CCCD.Text.Length == 0)
             {
-                System.Windows.MessageBox.Show("Vui lòng nhập đầy đủ thông tin!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
-
+                var tb = new DialogCustoms("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
             }
             else
             {
@@ -138,8 +140,8 @@ namespace DuAn_QuanLiKhachSan.PageChild
                     bUS_NhanVIen.Insert(TenNV, SDT, NgaySinh, DiaChi, HinhAnh, VaiTro, Email, phai, MatKhau, CCCD);
 
                     // Thông báo kết quả
-                    System.Windows.MessageBox.Show("Lưu thành công");
-
+                    var tb = new DialogCustoms("Lưu thành công!", "Thông báo!", DialogCustoms.OK);
+                    tb.ShowDialog();
                     // Gọi hàm LoadData để cập nhật dữ liệu hiển thị (giả sử bạn đã có hàm LoadData)
 
 
@@ -149,7 +151,8 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 }
                 catch (Exception ex)
                 {
-                    System.Windows.MessageBox.Show($"Mời bạn nhập lại  ", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                    var tb = new DialogCustoms("Mời bạn nhập lại!", "Thông báo!", DialogCustoms.OK);
+                    tb.ShowDialog();
                 }
             }
 

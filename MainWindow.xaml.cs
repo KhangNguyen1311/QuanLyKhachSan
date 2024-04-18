@@ -42,22 +42,22 @@ namespace DuAn_QuanLiKhachSan
         {
             if(nhanvien.VaiTro.ToLower() == "giám đốc")
             {
-                rdRoom.Visibility = Visibility.Hidden;
-                rdKindOfRoom.Visibility = Visibility.Hidden;
-                rdBookroom.Visibility = Visibility.Hidden;
-                rdBills.Visibility = Visibility.Hidden;
-                rdClient.Visibility = Visibility.Hidden;
-                rdServices.Visibility = Visibility.Hidden;
+                rdRoom.Visibility = Visibility.Collapsed;
+                rdKindOfRoom.Visibility = Visibility.Collapsed;
+                rdBookroom.Visibility = Visibility.Collapsed;
+                rdBills.Visibility = Visibility.Collapsed;
+                rdClient.Visibility = Visibility.Collapsed;
+                rdServices.Visibility = Visibility.Collapsed;
             }
             else if(nhanvien.VaiTro.ToLower()=="quản lý")
             {
-                rdChart.Visibility = Visibility.Hidden;
+                rdChart.Visibility = Visibility.Collapsed;
 
             }
             else
             {
-                rdChart.Visibility= Visibility.Hidden;
-                rdStaff.Visibility= Visibility.Hidden;
+                rdChart.Visibility= Visibility.Collapsed;
+                rdStaff.Visibility= Visibility.Collapsed;
             }
         }
         public void loadThongtinNhanvien()
@@ -150,7 +150,8 @@ namespace DuAn_QuanLiKhachSan
 
         private void rdSettings_Click(object sender, RoutedEventArgs e)
         {
-            frameContent.Navigate(new SettingPage(nhanvien));
+            var stp = new SettingPage(nhanvien);
+            stp.ShowDialog();
         }
     }
 }

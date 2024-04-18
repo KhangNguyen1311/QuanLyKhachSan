@@ -81,7 +81,8 @@ namespace DuAn_QuanLiKhachSan.Views
                     string malp = cell.Text;
                     DTO_QLKS.LoaiPhong lp = BUS_LoaiPhong.SelectAll().Where(c => c.MaLoaiPhong == malp).FirstOrDefault();
                     BUS_LoaiPhong.Xoa(lp);
-                    MessageBox.Show("Xoa cc");
+                    var tb = new DialogCustoms("Xoá thành công", "Thông báo", DialogCustoms.OK);
+                    tb.ShowDialog();
 
                 }
             }

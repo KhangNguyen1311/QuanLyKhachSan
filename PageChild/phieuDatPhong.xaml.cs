@@ -203,6 +203,11 @@ namespace DuAn_QuanLiKhachSan.PageChild
                 var thongba = new DialogCustoms("Vui lòng điền đủ thông tin", "Thông báo",DialogCustoms.OK);
                 thongba.ShowDialog();
             }
+            else if (PhongChon.Items.Count == 0)
+            {
+                var tb = new DialogCustoms("Vui lòng chọn phòng!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
+            }
             else
             {
                 DTO_QLKS.PhieuDatPhong phieu = new DTO_QLKS.PhieuDatPhong

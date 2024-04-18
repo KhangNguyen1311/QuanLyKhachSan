@@ -41,15 +41,24 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DTO_QLKS.LoaiPhong loaiPhong = new DTO_QLKS.LoaiPhong
+
+            if (txt_tenlp.Text.Length == 0 || txt_giagio.Text.Length == 0 || giangay.Text.Length == 0)
             {
-                TenLoaiPhong = txt_tenlp.Text,
-                GiaTheoGio = double.Parse(txt_giagio.Text),
-                GiaTheoNgay = double.Parse(giangay.Text)
-            };
-            bUS_LoaiPhong.Insert(loaiPhong);
-            var ThongBao1 = new DialogCustoms("Thêm loại phòng thành công", "Thông báo", DialogCustoms.OK);
-            ThongBao1.ShowDialog();
+                var tb = new DialogCustoms("Không để trống thông tin!","Thông báo",DialogCustoms.OK);
+                tb.ShowDialog();
+            }
+            else
+            {
+                DTO_QLKS.LoaiPhong loaiPhong = new DTO_QLKS.LoaiPhong
+                {
+                    TenLoaiPhong = txt_tenlp.Text,
+                    GiaTheoGio = double.Parse(txt_giagio.Text),
+                    GiaTheoNgay = double.Parse(giangay.Text)
+                };
+                bUS_LoaiPhong.Insert(loaiPhong);
+                var ThongBao1 = new DialogCustoms("Thêm loại phòng thành công", "Thông báo", DialogCustoms.OK);
+                ThongBao1.ShowDialog();
+            }
         }
     }
 }

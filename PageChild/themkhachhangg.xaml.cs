@@ -1,4 +1,5 @@
 ﻿using BUS_QLKS;
+using DuAn_QuanLiKhachSan.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +50,8 @@ namespace DuAn_QuanLiKhachSan.PageChild
 
             if (ten.Text.Length == 0 || sdthoai.Text.Length == 0 || ngaysinh.Text.Length == 0 || diachi.Text.Length == 0 || cancuoc.Text.Length == 0 || quocgia.Text.Length == 0)
             {
-                System.Windows.MessageBox.Show("Vui lòng nhập đầy đủ thông tin!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                var tb = new DialogCustoms("Vui lòng nhập đầy đủ thông tin!", "Thông báo!", DialogCustoms.OK);
+                tb.ShowDialog();
             }
             else
             {
@@ -71,12 +73,14 @@ namespace DuAn_QuanLiKhachSan.PageChild
                     string MaCMT = cancuoc.Text;
                     string QuocTich = quocgia.Text;
                     bUS_Khachhang.Insert(TenKH, SDT, NgaySinh, Diachi, Phai, MaCMT, QuocTich);
-                    System.Windows.MessageBox.Show("Lưu thành công");
+                    var tb = new DialogCustoms("Lưu thành công!", "Thông báo!", DialogCustoms.OK);
+                    tb.ShowDialog();
 
                 }
                 catch (Exception ex)
                 {
-                    System.Windows.MessageBox.Show($"Mời bạn nhập lại  ", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                    var tb = new DialogCustoms("Mời bạn nhập lại!", "Thông báo!", DialogCustoms.OK);
+                    tb.ShowDialog();
                 }
             }
 
